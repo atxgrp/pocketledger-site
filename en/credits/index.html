@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sources and credits — Pocket Ledger</title><meta name="description" content=""><link rel="alternate" hreflang="fr" href="../../credits/"><link rel="alternate" hreflang="en" href="../../en/credits/"><style>
+:root{--accent:#4F46E5;--bg:#fafafa;--fg:#1c1c1e;--muted:#6b6b70;--card:#fff;--line:#e5e5ea}
+@media(prefers-color-scheme:dark){:root{--accent:#8b8bff;--bg:#1c1c1e;--fg:#f2f2f7;--muted:#a1a1a6;--card:#2c2c2e;--line:#3a3a3c}.btn:not(.soft){color:#14142b}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.55 -apple-system,BlinkMacSystemFont,"SF Pro Text",Helvetica,Arial,sans-serif}
+header,main,footer{max-width:760px;margin:0 auto;padding:20px 20px}
+header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+header a.brand{font-weight:700;color:var(--fg);text-decoration:none;font-size:20px}
+nav a{margin-left:14px;color:var(--muted);text-decoration:none;font-size:15px}nav a:hover{color:var(--accent)}
+h1{font-size:34px;line-height:1.15;margin:.2em 0}h2{font-size:21px;margin:1.6em 0 .3em}
+a{color:var(--accent)}.muted{color:var(--muted)}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:600;margin:6px 8px 6px 0}
+.btn.off{background:var(--line);color:var(--muted);cursor:default}
+.lead{font-size:20px}.lang-switch{border:1px solid var(--line);border-radius:999px;padding:3px 12px;color:var(--fg)!important}
+.btn.soft{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:6px 22px;margin:16px 0}
+footer{color:var(--muted);font-size:14px;border-top:1px solid var(--line);margin-top:30px}
+ul{padding-left:1.2em}li{margin:.25em 0}
+</style><script>(function(){try{var s=localStorage.plLang;var want=s||((navigator.language||'en').toLowerCase().indexOf('fr')==0?'fr':'en');if(want!=='en'){location.replace('../../credits/');}}catch(e){}})();</script></head>
+<body><header><a class="brand" href="../../en/">Pocket Ledger</a><nav><a href="../../en/privacy/">Privacy</a><a href="../../en/terms/">Terms</a><a href="../../en/help/">Help</a><a class="lang-switch" href="../../credits/" hreflang="fr" lang="fr" onclick="try{localStorage.plLang='fr'}catch(e){}">Français</a></nav></header>
+<main><h1>Sources and credits</h1><h2>Data sources</h2>
+<ul><li>Exchange rates: reference rates of the European Central Bank, published at <a href="https://www.ecb.europa.eu/stats/eurofxref/">https://www.ecb.europa.eu/stats/eurofxref/</a> (eurofxref-daily.xml). Source: ECB.</li><li>Cryptocurrency prices: data provided by CoinGecko (<a href="https://www.coingecko.com">https://www.coingecko.com</a>), through its public API.</li><li>Bank connections (optional): GoCardless Bank Account Data (<a href="https://bankaccountdata.gocardless.com">https://bankaccountdata.gocardless.com</a>) and Enable Banking (<a href="https://enablebanking.com">https://enablebanking.com</a>), with your own access keys. Their terms apply.</li><li>Carbon footprint: per-category factors are orders of magnitude set by the publisher, editable by you; they do not come from an official database and do not replace a carbon audit.</li><li>Default categories, report templates and texts: works by ATX Grp.</li></ul>
+<h2>Supported formats and standards</h2>
+<p>CSV, OFX/QFX, QIF, MT940, CAMT.053 (ISO 20022), HomeBank export files (.xhb, .hbk) and Actual Budget databases, read-only, following their public specifications. No data or code from those projects is included.</p>
+<h2>Cryptography</h2>
+<p>SHA-256, PBKDF2-HMAC-SHA256 (RFC 8018), AES-256-GCM and ECDSA P-256 signatures (FIPS 186-4), provided by Apple&#x27;s CryptoKit and CommonCrypto; update signatures (EdDSA) are checked by Sparkle.</p>
+<h2>Components</h2>
+<p>The distributed version embeds a single third-party library: Sparkle (<a href="https://sparkle-project.org">https://sparkle-project.org</a>), which checks and installs updates, under the MIT licence with the licences of its components (full text: <a href="https://github.com/sparkle-project/Sparkle/blob/2.x/LICENSE">https://github.com/sparkle-project/Sparkle/blob/2.x/LICENSE</a>). No other open-source code is included. The app uses Apple frameworks shipped with macOS: SwiftUI, Swift Charts, CryptoKit, CloudKit, WidgetKit, App Intents, Vision, PDFKit, EventKit, LocalAuthentication, Security, Foundation and SQLite (reading Actual Budget files). Pictograms are Apple SF Symbols, used under their licence. The icon and visual identity are creations of ATX Grp.</p>
+<h2>Acknowledgements</h2>
+<p>Thanks to the personal-finance projects that inspired the uses (HomeBank, Actual Budget…): Pocket Ledger is an independent creation that reuses neither their code, their texts nor their data.</p></main>
+<footer>© 2026 ATX Grp · <a href="mailto:atxgrp@gmail.com">atxgrp@gmail.com</a> · <a href="../../en/legal/">Legal notice</a> · <a href="../../en/credits/">Credits</a></footer></body></html>

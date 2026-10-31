@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Sources et crédits — Pocket Ledger</title><meta name="description" content=""><style>
+<title>Sources et crédits — Pocket Ledger</title><meta name="description" content=""><link rel="alternate" hreflang="fr" href="../credits/"><link rel="alternate" hreflang="en" href="../en/credits/"><style>
 :root{--accent:#4F46E5;--bg:#fafafa;--fg:#1c1c1e;--muted:#6b6b70;--card:#fff;--line:#e5e5ea}
 @media(prefers-color-scheme:dark){:root{--accent:#8b8bff;--bg:#1c1c1e;--fg:#f2f2f7;--muted:#a1a1a6;--card:#2c2c2e;--line:#3a3a3c}.btn:not(.soft){color:#14142b}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.55 -apple-system,BlinkMacSystemFont,"SF Pro Text",Helvetica,Arial,sans-serif}
@@ -11,14 +11,15 @@ nav a{margin-left:14px;color:var(--muted);text-decoration:none;font-size:15px}na
 h1{font-size:34px;line-height:1.15;margin:.2em 0}h2{font-size:21px;margin:1.6em 0 .3em}
 a{color:var(--accent)}.muted{color:var(--muted)}
 .btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:600;margin:6px 8px 6px 0}
+.btn.off{background:var(--line);color:var(--muted);cursor:default}
+.lead{font-size:20px}.lang-switch{border:1px solid var(--line);border-radius:999px;padding:3px 12px;color:var(--fg)!important}
 .btn.soft{background:transparent;color:var(--accent);border:1px solid var(--accent)}
 .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:6px 22px;margin:16px 0}
-.lang{border-top:1px solid var(--line);margin-top:38px;padding-top:6px}
 footer{color:var(--muted);font-size:14px;border-top:1px solid var(--line);margin-top:30px}
 ul{padding-left:1.2em}li{margin:.25em 0}
-</style></head>
-<body><header><a class="brand" href="../">Pocket Ledger</a><nav><a href="../privacy/">Confidentialité · Privacy</a><a href="../terms/">Conditions · Terms</a><a href="../help/">Aide · Help</a></nav></header>
-<main><h1>Sources et crédits · Sources and credits</h1><p class="muted"><a href="#en">English version below</a></p><section lang="fr"><h2>Sources de données</h2>
+</style><script>(function(){try{var s=localStorage.plLang;var want=s||((navigator.language||'en').toLowerCase().indexOf('fr')==0?'fr':'en');if(want!=='fr'){location.replace('../en/credits/');}}catch(e){}})();</script></head>
+<body><header><a class="brand" href="../">Pocket Ledger</a><nav><a href="../privacy/">Confidentialité</a><a href="../terms/">Conditions</a><a href="../help/">Aide</a><a class="lang-switch" href="../en/credits/" hreflang="en" lang="en" onclick="try{localStorage.plLang='en'}catch(e){}">English</a></nav></header>
+<main><h1>Sources et crédits</h1><h2>Sources de données</h2>
 <ul><li>Taux de change : taux de référence de la Banque centrale européenne, publiés sur <a href="https://www.ecb.europa.eu/stats/eurofxref/">https://www.ecb.europa.eu/stats/eurofxref/</a> (fichier eurofxref-daily.xml). Source : BCE.</li><li>Cours des cryptomonnaies : données fournies par CoinGecko (<a href="https://www.coingecko.com">https://www.coingecko.com</a>), via son API publique.</li><li>Connexions bancaires (facultatives) : GoCardless Bank Account Data (<a href="https://bankaccountdata.gocardless.com">https://bankaccountdata.gocardless.com</a>) et Enable Banking (<a href="https://enablebanking.com">https://enablebanking.com</a>), avec vos propres clés d&#x27;accès. Leurs conditions s&#x27;appliquent.</li><li>Empreinte carbone : les facteurs par catégorie sont des ordres de grandeur définis par l&#x27;éditeur, modifiables par vous ; ils ne proviennent pas d&#x27;une base officielle et ne remplacent pas un bilan carbone.</li><li>Catégories par défaut, modèles de rapports et textes : œuvres d&#x27;ATX Grp.</li></ul>
 <h2>Formats et normes pris en charge</h2>
 <p>CSV, OFX/QFX, QIF, MT940, CAMT.053 (ISO 20022), fichiers d&#x27;export HomeBank (.xhb, .hbk) et base Actual Budget, en lecture seule, selon leurs spécifications publiques. Aucune donnée ni aucun code de ces projets n&#x27;est inclus.</p>
@@ -27,14 +28,5 @@ ul{padding-left:1.2em}li{margin:.25em 0}
 <h2>Composants</h2>
 <p>La version diffusée embarque une seule bibliothèque tierce : Sparkle (<a href="https://sparkle-project.org">https://sparkle-project.org</a>), qui vérifie et installe les mises à jour, sous licence MIT, avec les licences de ses composants (texte complet : <a href="https://github.com/sparkle-project/Sparkle/blob/2.x/LICENSE">https://github.com/sparkle-project/Sparkle/blob/2.x/LICENSE</a>). Aucun autre code open source n&#x27;est inclus. L&#x27;app utilise les cadres d&#x27;Apple fournis avec macOS : SwiftUI, Swift Charts, CryptoKit, CloudKit, WidgetKit, App Intents, Vision, PDFKit, EventKit, LocalAuthentication, Security, Foundation et SQLite (lecture des fichiers Actual Budget). Les pictogrammes sont des SF Symbols d&#x27;Apple, utilisés conformément à leur licence. L&#x27;icône et la charte graphique sont des créations d&#x27;ATX Grp.</p>
 <h2>Remerciements</h2>
-<p>Merci aux projets de finances personnelles qui ont inspiré les usages (HomeBank, Actual Budget…) : Pocket Ledger est une création indépendante qui n&#x27;en reprend ni le code, ni les textes, ni les données.</p></section><section class="lang" id="en" lang="en"><h2>Data sources</h2>
-<ul><li>Exchange rates: reference rates of the European Central Bank, published at <a href="https://www.ecb.europa.eu/stats/eurofxref/">https://www.ecb.europa.eu/stats/eurofxref/</a> (eurofxref-daily.xml). Source: ECB.</li><li>Cryptocurrency prices: data provided by CoinGecko (<a href="https://www.coingecko.com">https://www.coingecko.com</a>), through its public API.</li><li>Bank connections (optional): GoCardless Bank Account Data (<a href="https://bankaccountdata.gocardless.com">https://bankaccountdata.gocardless.com</a>) and Enable Banking (<a href="https://enablebanking.com">https://enablebanking.com</a>), with your own access keys. Their terms apply.</li><li>Carbon footprint: per-category factors are orders of magnitude set by the publisher, editable by you; they do not come from an official database and do not replace a carbon audit.</li><li>Default categories, report templates and texts: works by ATX Grp.</li></ul>
-<h2>Supported formats and standards</h2>
-<p>CSV, OFX/QFX, QIF, MT940, CAMT.053 (ISO 20022), HomeBank export files (.xhb, .hbk) and Actual Budget databases, read-only, following their public specifications. No data or code from those projects is included.</p>
-<h2>Cryptography</h2>
-<p>SHA-256, PBKDF2-HMAC-SHA256 (RFC 8018), AES-256-GCM and ECDSA P-256 signatures (FIPS 186-4), provided by Apple&#x27;s CryptoKit and CommonCrypto; update signatures (EdDSA) are checked by Sparkle.</p>
-<h2>Components</h2>
-<p>The distributed version embeds a single third-party library: Sparkle (<a href="https://sparkle-project.org">https://sparkle-project.org</a>), which checks and installs updates, under the MIT licence with the licences of its components (full text: <a href="https://github.com/sparkle-project/Sparkle/blob/2.x/LICENSE">https://github.com/sparkle-project/Sparkle/blob/2.x/LICENSE</a>). No other open-source code is included. The app uses Apple frameworks shipped with macOS: SwiftUI, Swift Charts, CryptoKit, CloudKit, WidgetKit, App Intents, Vision, PDFKit, EventKit, LocalAuthentication, Security, Foundation and SQLite (reading Actual Budget files). Pictograms are Apple SF Symbols, used under their licence. The icon and visual identity are creations of ATX Grp.</p>
-<h2>Acknowledgements</h2>
-<p>Thanks to the personal-finance projects that inspired the uses (HomeBank, Actual Budget…): Pocket Ledger is an independent creation that reuses neither their code, their texts nor their data.</p></section></main>
-<footer>© 2026 ATX Grp · <a href="mailto:atxgrp@gmail.com">atxgrp@gmail.com</a> · <a href="../legal/">Mentions légales · Legal notice</a> · <a href="../credits/">Crédits · Credits</a></footer></body></html>
+<p>Merci aux projets de finances personnelles qui ont inspiré les usages (HomeBank, Actual Budget…) : Pocket Ledger est une création indépendante qui n&#x27;en reprend ni le code, ni les textes, ni les données.</p></main>
+<footer>© 2026 ATX Grp · <a href="mailto:atxgrp@gmail.com">atxgrp@gmail.com</a> · <a href="../legal/">Mentions légales</a> · <a href="../credits/">Crédits</a></footer></body></html>

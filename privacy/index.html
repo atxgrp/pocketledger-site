@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Politique de confidentialité — Pocket Ledger</title><meta name="description" content=""><style>
+<title>Politique de confidentialité — Pocket Ledger</title><meta name="description" content=""><link rel="alternate" hreflang="fr" href="../privacy/"><link rel="alternate" hreflang="en" href="../en/privacy/"><style>
 :root{--accent:#4F46E5;--bg:#fafafa;--fg:#1c1c1e;--muted:#6b6b70;--card:#fff;--line:#e5e5ea}
 @media(prefers-color-scheme:dark){:root{--accent:#8b8bff;--bg:#1c1c1e;--fg:#f2f2f7;--muted:#a1a1a6;--card:#2c2c2e;--line:#3a3a3c}.btn:not(.soft){color:#14142b}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.55 -apple-system,BlinkMacSystemFont,"SF Pro Text",Helvetica,Arial,sans-serif}
@@ -11,15 +11,15 @@ nav a{margin-left:14px;color:var(--muted);text-decoration:none;font-size:15px}na
 h1{font-size:34px;line-height:1.15;margin:.2em 0}h2{font-size:21px;margin:1.6em 0 .3em}
 a{color:var(--accent)}.muted{color:var(--muted)}
 .btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:600;margin:6px 8px 6px 0}
+.btn.off{background:var(--line);color:var(--muted);cursor:default}
+.lead{font-size:20px}.lang-switch{border:1px solid var(--line);border-radius:999px;padding:3px 12px;color:var(--fg)!important}
 .btn.soft{background:transparent;color:var(--accent);border:1px solid var(--accent)}
 .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:6px 22px;margin:16px 0}
-.lang{border-top:1px solid var(--line);margin-top:38px;padding-top:6px}
 footer{color:var(--muted);font-size:14px;border-top:1px solid var(--line);margin-top:30px}
 ul{padding-left:1.2em}li{margin:.25em 0}
-</style></head>
-<body><header><a class="brand" href="../">Pocket Ledger</a><nav><a href="../privacy/">Confidentialité · Privacy</a><a href="../terms/">Conditions · Terms</a><a href="../help/">Aide · Help</a></nav></header>
-<main><h1>Politique de confidentialité · Privacy policy</h1><p class="muted"><a href="#en">English version below</a></p><section lang="fr"><h2>Politique de confidentialité</h2>
-<p>Dernière mise à jour : 30 octobre 2026. Éditeur : ATX Grp — <a href="mailto:atxgrp@gmail.com">atxgrp@gmail.com</a></p>
+</style><script>(function(){try{var s=localStorage.plLang;var want=s||((navigator.language||'en').toLowerCase().indexOf('fr')==0?'fr':'en');if(want!=='fr'){location.replace('../en/privacy/');}}catch(e){}})();</script></head>
+<body><header><a class="brand" href="../">Pocket Ledger</a><nav><a href="../privacy/">Confidentialité</a><a href="../terms/">Conditions</a><a href="../help/">Aide</a><a class="lang-switch" href="../en/privacy/" hreflang="en" lang="en" onclick="try{localStorage.plLang='en'}catch(e){}">English</a></nav></header>
+<main><h1>Politique de confidentialité</h1><p>Dernière mise à jour : 30 octobre 2026. Éditeur : ATX Grp — <a href="mailto:atxgrp@gmail.com">atxgrp@gmail.com</a></p>
 <h2>En résumé</h2>
 <p>Pocket Ledger fonctionne sur votre Mac. Vos comptes, transactions, budgets et pièces jointes restent chez vous. ATX Grp ne reçoit aucune de vos données : pas de compte à créer, pas de publicité, pas de mesure d&#x27;audience, pas de pistage, aucun service d&#x27;analyse tiers.</p>
 <h2>Où sont vos données</h2>
@@ -34,21 +34,5 @@ ul{padding-left:1.2em}li{margin:.25em 0}
 <h2>Vos droits</h2>
 <p>ATX Grp ne détient aucune donnée de votre registre financier. Vous restez maître de vos données : vous pouvez les exporter (CSV, QIF, sauvegarde) et les supprimer à tout moment. Si vous nous écrivez, nous utilisons votre message et votre adresse e-mail uniquement pour vous répondre. Pour exercer vos droits (accès, rectification, effacement, opposition) ou poser une question : <a href="mailto:atxgrp@gmail.com.">atxgrp@gmail.com.</a> Vous pouvez aussi saisir l&#x27;autorité de protection des données de votre pays (en France, la CNIL).</p>
 <h2>Modifications</h2>
-<p>Cette politique peut évoluer avec l&#x27;app ; la date de mise à jour figure en haut de la page.</p></section><section class="lang" id="en" lang="en"><h2>Privacy policy</h2>
-<p>Last updated: 30 October 2026. Publisher: ATX Grp — <a href="mailto:atxgrp@gmail.com">atxgrp@gmail.com</a></p>
-<h2>In short</h2>
-<p>Pocket Ledger runs on your Mac. Your accounts, transactions, budgets and attachments stay with you. ATX Grp receives none of your data: no account to create, no advertising, no analytics, no tracking, no third-party analytics service.</p>
-<h2>Where your data lives</h2>
-<ul><li>A readable file (ledger.json) and an attachments folder, in ~/Library/Application Support/PocketLedger or in the folder you choose in Settings → Data.</li><li>The file can only be read by your macOS user (permissions 600).</li><li>Bank access keys and your shared-account signing keys are kept in your Mac&#x27;s Keychain, never in the data file.</li><li>Automatic copies of the file (one per day, 14 days and one per month) are kept in ~/Library/Application Support/PocketLedger/Backups, with the same protections. You can turn them off in Settings → Data.</li><li>Backups can be password-encrypted (AES-256-GCM). Without the password nobody, ATX Grp included, can read or recover them.</li></ul>
-<h2>Network connections</h2>
-<p>The app only goes online in these cases:</p>
-<ul><li>Exchange rates: only if one of your accounts is in a foreign currency (or when you click &quot;Update&quot;), and at most every 12 hours, the app downloads the reference rates published by the European Central Bank. No personal data is sent; your IP address is visible to the ECB as with any web page.</li><li>Cryptocurrency prices: only if you enter cryptocurrencies. The app asks CoinGecko for prices; only the symbols of tracked assets are sent, along with your IP address.</li><li>Updates (optional, off by default): if you turn on automatic checking or click &quot;Check now&quot;, the app contacts the publisher&#x27;s server (its address is shown in Settings → General). Only the app version and the update library&#x27;s version are sent, along with your IP address; no profile of your Mac is sent. The feed is hosted on GitHub Pages: GitHub then receives your IP address, under its own privacy policy.</li><li>Bank connection: only if you set it up. Your transactions travel between your bank, the provider you chose (GoCardless or Enable Banking) and your Mac, using keys you created yourself with that provider. ATX Grp is not in the loop.</li><li>iCloud: only if you turn synchronisation on. Your data is then stored in your private iCloud space (CloudKit), run by Apple under its own policy. ATX Grp has no access.</li><li>Shared folder or shared account: if you put data in a synced folder (iCloud Drive, Dropbox, Syncthing…) or share an account, it is visible to the people and the service that manage that folder.</li></ul>
-<h2>System permissions</h2>
-<ul><li>Calendar: only if you turn on showing your scheduled items in the Calendar app. The app writes to a &quot;Pocket Ledger&quot; calendar and does not read your other events.</li><li>Touch ID / password: locking uses the system; the app never receives your fingerprint or password.</li><li>Receipt scanning: text recognition runs on your Mac (Vision); the image never leaves the device.</li><li>Siri, Shortcuts, widgets, menu-bar quick entry: everything stays local on your Mac.</li><li>Notifications: reminders (due items, envelopes, balances) are local notifications; nothing is sent to a server.</li><li>Spotlight (optional, off by default): if you turn it on, the payees, amounts and categories of your transactions are added to your Mac&#x27;s search index, visible even while the app is locked. Turning the option off erases that index.</li></ul>
-<h2>Retention and deletion</h2>
-<p>Your data stays as long as you keep it. To erase everything: quit the app, delete the data folder (and, if you had turned it on, the Pocket Ledger data in System Settings → iCloud), then remove the &quot;Pocket Ledger&quot; entries from your Keychain if you wish.</p>
-<h2>Your rights</h2>
-<p>ATX Grp holds no data from your financial ledger. You stay in control: you can export (CSV, QIF, backup) and delete your data at any time. If you write to us, we use your message and e-mail address only to reply. To exercise your rights (access, rectification, erasure, objection) or ask a question: <a href="mailto:atxgrp@gmail.com.">atxgrp@gmail.com.</a> You may also contact your country&#x27;s data protection authority (in France, the CNIL).</p>
-<h2>Changes</h2>
-<p>This policy may change with the app; the update date is shown at the top.</p></section></main>
-<footer>© 2026 ATX Grp · <a href="mailto:atxgrp@gmail.com">atxgrp@gmail.com</a> · <a href="../legal/">Mentions légales · Legal notice</a> · <a href="../credits/">Crédits · Credits</a></footer></body></html>
+<p>Cette politique peut évoluer avec l&#x27;app ; la date de mise à jour figure en haut de la page.</p></main>
+<footer>© 2026 ATX Grp · <a href="mailto:atxgrp@gmail.com">atxgrp@gmail.com</a> · <a href="../legal/">Mentions légales</a> · <a href="../credits/">Crédits</a></footer></body></html>
