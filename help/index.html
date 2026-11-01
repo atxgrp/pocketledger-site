@@ -1,80 +1,108 @@
 <!doctype html>
 <html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Aide — Pocket Ledger</title><meta name="description" content=""><link rel="alternate" hreflang="fr" href="../help/"><link rel="alternate" hreflang="en" href="../en/help/"><style>
-:root{--accent:#4F46E5;--bg:#fafafa;--fg:#1c1c1e;--muted:#6b6b70;--card:#fff;--line:#e5e5ea}
-@media(prefers-color-scheme:dark){:root{--accent:#8b8bff;--bg:#1c1c1e;--fg:#f2f2f7;--muted:#a1a1a6;--card:#2c2c2e;--line:#3a3a3c}.btn:not(.soft){color:#14142b}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.55 -apple-system,BlinkMacSystemFont,"SF Pro Text",Helvetica,Arial,sans-serif}
-header,main,footer{max-width:760px;margin:0 auto;padding:20px 20px}
-header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-header a.brand{font-weight:700;color:var(--fg);text-decoration:none;font-size:20px}
-nav a{margin-left:14px;color:var(--muted);text-decoration:none;font-size:15px}nav a:hover{color:var(--accent)}
-h1{font-size:34px;line-height:1.15;margin:.2em 0}h2{font-size:21px;margin:1.6em 0 .3em}
-a{color:var(--accent)}.muted{color:var(--muted)}
-.btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:600;margin:6px 8px 6px 0}
-.btn.off{background:var(--line);color:var(--muted);cursor:default}
-.lead{font-size:20px}.lang-switch{border:1px solid var(--line);border-radius:999px;padding:3px 12px;color:var(--fg)!important}
-.btn.soft{background:transparent;color:var(--accent);border:1px solid var(--accent)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:6px 22px;margin:16px 0}
-footer{color:var(--muted);font-size:14px;border-top:1px solid var(--line);margin-top:30px}
-ul{padding-left:1.2em}li{margin:.25em 0}
+<title>Aide — Pocket Ledger</title><meta name="description" content=""><meta name="color-scheme" content="light dark"><link rel="alternate" hreflang="fr" href="../help/"><link rel="alternate" hreflang="en" href="../en/help/"><link rel="icon" href="../img/icon.png"><style>
+:root{--accent:#4F46E5;--accent-soft:#eceafd;--bg:#fafafa;--fg:#1c1c1e;--muted:#6b6b70;--card:#fff;--line:#e5e5ea;--max:1080px}
+@media(prefers-color-scheme:dark){:root{--accent:#8b8bff;--accent-soft:#2a2a4a;--bg:#1c1c1e;--fg:#f2f2f7;--muted:#a1a1a6;--card:#2c2c2e;--line:#3a3a3c}.btn:not(.soft):not(.off){color:#14142b}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text",Helvetica,Arial,sans-serif}
+a{color:var(--accent)}.muted{color:var(--muted)}code{background:var(--accent-soft);padding:1px 6px;border-radius:6px;font-size:.9em}
+.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;background:var(--card);padding:8px 12px;border-radius:8px;z-index:20}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;gap:18px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+header a.brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--fg);text-decoration:none;font-size:19px}
+header a.brand img{width:30px;height:30px;border-radius:7px}
+nav{display:flex;gap:4px 18px;flex-wrap:wrap;flex:1}nav a{color:var(--muted);text-decoration:none;font-size:15px}nav a:hover,nav a[aria-current]{color:var(--accent)}
+.lang-switch{border:1px solid var(--line);border-radius:999px;padding:3px 12px;color:var(--fg)!important;text-decoration:none;font-size:14px}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 24px;border-radius:999px;text-decoration:none;font-weight:600;margin:6px 10px 6px 0}
+.btn.off{background:var(--line);color:var(--muted);cursor:default}.btn.soft{background:transparent;color:var(--accent);border:1px solid var(--accent)}
+.hero{padding:56px 0 24px;text-align:center}.hero h1{font-size:clamp(34px,6vw,56px);line-height:1.08;margin:.1em auto .3em;max-width:16em;letter-spacing:-.02em}
+.hero .lead{font-size:clamp(18px,2.4vw,22px);max-width:36em;margin:0 auto 14px;color:var(--muted)}
+.badge{display:inline-block;background:var(--accent-soft);color:var(--accent);border-radius:999px;padding:4px 14px;font-size:14px;font-weight:600}
+.shot{display:block;max-width:100%;height:auto;border-radius:14px;border:1px solid var(--line);box-shadow:0 18px 50px rgba(0,0,0,.18);margin:26px auto}
+section{padding:42px 0}section h2{font-size:clamp(26px,4vw,34px);line-height:1.15;margin:0 0 .4em;letter-spacing:-.01em}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin-top:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px}
+.card h3{margin:.1em 0 .3em;font-size:18px}.card p{margin:0;color:var(--muted);font-size:15.5px}
+a.card{text-decoration:none;color:inherit;display:block}a.card:hover{border-color:var(--accent)}a.card .more{color:var(--accent);font-size:15px;display:inline-block;margin-top:8px}
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;align-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.chips span{background:var(--accent-soft);color:var(--accent);padding:6px 14px;border-radius:999px;font-weight:600;font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-top:18px}.stat{text-align:center}.stat b{display:block;font-size:34px;color:var(--accent)}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:4px 20px;margin:10px 0}summary{cursor:pointer;font-weight:600;padding:12px 0}details p{margin:0 0 14px;color:var(--muted)}
+.cta{text-align:center;background:var(--accent-soft);border-radius:26px;padding:40px 20px;margin:30px 0}
+.page{max-width:760px;margin:0 auto;padding:36px 20px}.page h1{font-size:clamp(30px,5vw,40px);line-height:1.12;margin:.2em 0 .1em;letter-spacing:-.01em}
+.page h2{font-size:23px;margin:1.6em 0 .3em}.page h3{font-size:18px;margin:1.2em 0 .2em}.page .lead{font-size:20px;color:var(--muted)}
+.toc{display:flex;flex-wrap:wrap;gap:6px 14px;margin:14px 0 4px;padding:0;list-style:none}.toc a{font-size:15px;text-decoration:none}
+.page ul{padding-left:1.2em}li{margin:.25em 0}.crumb{font-size:15px}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:34px 0 40px;color:var(--muted);font-size:14.5px}
+.fcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:22px}.fcols b{display:block;color:var(--fg);margin-bottom:6px}.fcols a{display:block;color:var(--muted);text-decoration:none;margin:3px 0}.fcols a:hover{color:var(--accent)}
+.legal{margin-top:24px;border-top:1px solid var(--line);padding-top:16px}
+@media(max-width:640px){header .wrap{gap:8px}.hero{padding-top:34px}section{padding:28px 0}}
 </style><script>(function(){try{var s=localStorage.plLang;var want=s||((navigator.language||'en').toLowerCase().indexOf('fr')==0?'fr':'en');if(want!=='fr'){location.replace('../en/help/');}}catch(e){}})();</script></head>
-<body><header><a class="brand" href="../">Pocket Ledger</a><nav><a href="../privacy/">Confidentialité</a><a href="../terms/">Conditions</a><a href="../help/">Aide</a><a class="lang-switch" href="../en/help/" hreflang="en" lang="en" onclick="try{localStorage.plLang='en'}catch(e){}">English</a></nav></header>
-<main><h1>Aide</h1><h2>Premiers pas</h2>
+<body><a class="skip" href="#main">Aller au contenu</a><header><div class="wrap"><a class="brand" href="../"><img src="../img/icon.png" alt="" width="30" height="30">Pocket Ledger</a><nav><a href="../features/">Fonctions</a><a href="../security/">Sécurité</a><a href="../help/" aria-current=page>Aide</a><a href="../roadmap/">Feuille de route</a><a href="../changelog/">Nouveautés</a><a href="../support/">Support</a><a href="../about/">À propos</a></nav><a class="lang-switch" href="../en/help/" hreflang="en" lang="en" onclick="try{localStorage.plLang='en'}catch(e){}">English</a></div></header>
+<main id="main"><div class="page"><h1>Aide</h1><p class="lead">Le guide complet de Pocket Ledger.</p><ul class="toc"><li><a href="#s0">Premiers pas</a></li><li><a href="#s1">Comptes</a></li><li><a href="#s2">Transactions</a></li><li><a href="#s3">Catégories, étiquettes, bénéficiaires</a></li><li><a href="#s4">Règles automatiques</a></li><li><a href="#s5">Budget</a></li><li><a href="#s6">Récurrents</a></li><li><a href="#s7">Prêts</a></li><li><a href="#s8">Abonnements</a></li><li><a href="#s9">Objectifs d&#x27;épargne</a></li><li><a href="#s10">Devises</a></li><li><a href="#s11">Cryptomonnaies</a></li><li><a href="#s12">Rapports</a></li><li><a href="#s13">Pièces jointes</a></li><li><a href="#s14">Partager un compte</a></li><li><a href="#s15">Importer et exporter</a></li><li><a href="#s16">Sauvegardes automatiques</a></li><li><a href="#s17">Masquer les montants</a></li><li><a href="#s18">Contrôle d&#x27;intégrité et journal</a></li><li><a href="#s19">Mode découverte</a></li><li><a href="#s20">Sauvegarde et restauration</a></li><li><a href="#s21">Synchroniser plusieurs Macs</a></li><li><a href="#s22">Sécurité</a></li><li><a href="#s23">Mises à jour</a></li><li><a href="#s24">Rappels, barre de menus et Spotlight</a></li><li><a href="#s25">Widgets, Siri et Raccourcis</a></li><li><a href="#s26">Raccourcis clavier</a></li><li><a href="#s27">Problèmes courants</a></li><li><a href="#s28">Glossaire</a></li><li><a href="#s29">Aide et contact</a></li></ul><h2 id="s0">Premiers pas</h2>
+<p>Pocket Ledger demande macOS 14 (Sonoma) ou plus récent, sur Mac Intel comme sur Mac Apple Silicon.</p>
 <p>1. Créez un compte (Comptes → Nouveau compte) : nom, devise, solde de départ. Un compte par banque, carte, livret ou caisse d&#x27;espèces.</p>
 <p>2. Ajoutez vos transactions avec « Nouvelle transaction » (⌘N), ou importez le relevé de votre banque (Comptes → Importer).</p>
 <p>3. Laissez Pocket Ledger proposer les catégories : il apprend de vos règles et de votre historique.</p>
 <p>4. Fixez des enveloppes dans Budget, puis suivez le tableau de bord.</p>
 <p>Astuce : ⌘K ouvre « Aller à… » pour atteindre n&#x27;importe quel écran ou compte en tapant quelques lettres ; ⌘[ et ⌘] reculent et avancent comme dans un navigateur.</p>
-<h2>Comptes</h2>
+<h2 id="s1">Comptes</h2>
 <p>Types : compte bancaire, carte, espèces, épargne, actif, passif. Vous pouvez grouper les comptes (« Famille », « Épargne »…), fixer un solde minimum (une alerte apparaît sur le tableau de bord), fermer un compte sans le supprimer et choisir une devise propre à chaque compte. Clic droit sur un compte : Modifier, Partager.</p>
-<h2>Transactions</h2>
+<h2 id="s2">Transactions</h2>
 <ul><li>Saisie rapide : montant, date, bénéficiaire, catégorie. Dépense ou revenu d&#x27;un clic.</li><li>« Avancé » : étiquettes, ventilation sur plusieurs catégories, pièces jointes et scan de ticket.</li><li>Statuts : en attente, pointée (vue sur le relevé), rapprochée (vérifiée). Le drapeau sert de pense-bête.</li><li>Virements entre comptes, y compris en devises différentes.</li><li>Sélection multiple : catégoriser, pointer, drapeau ou supprimer en une fois. Annulation : ⌥⌘Z.</li><li>Filtres rapides en haut de la liste, recherche libre et filtre détaillé (période, montant, catégorie, étiquette…).</li></ul>
-<h2>Catégories, étiquettes, bénéficiaires</h2>
+<h2 id="s3">Catégories, étiquettes, bénéficiaires</h2>
 <p>Catégories hiérarchiques (revenu ou dépense, « besoin » ou « envie » pour la vue 50/30/20). Les étiquettes transversales regroupent par thème (#vacances). Gérer → Bénéficiaires fusionne les noms qui désignent le même commerçant (CARTE 12/03 CARREFOUR → Carrefour).</p>
-<h2>Règles automatiques</h2>
+<h2 id="s4">Règles automatiques</h2>
 <p>Gérer → Règles : « si le bénéficiaire ou le mémo contient… alors catégorie… ». Les règles s&#x27;appliquent aux saisies et aux imports ; vous pouvez limiter une règle à la dépense, au revenu ou à un compte, et l&#x27;appliquer à l&#x27;historique.</p>
-<h2>Budget</h2>
+<h2 id="s5">Budget</h2>
 <p>Une enveloppe par catégorie et par mois ; le trait sur la barre indique où en est le mois. Le reste peut être reporté. L&#x27;assistant propose des montants d&#x27;après vos 3 derniers mois, et vous pouvez déplacer de l&#x27;argent d&#x27;une enveloppe à l&#x27;autre. Un message prévient si le rythme actuel dépasse l&#x27;enveloppe.</p>
-<h2>Récurrents</h2>
+<h2 id="s6">Récurrents</h2>
 <p>Loyers, abonnements, salaires : échéance, fréquence, montant. Validez en un clic ou activez la saisie automatique. Les échéances à venir apparaissent sur le tableau de bord et, si vous le souhaitez, dans l&#x27;app Calendrier (Réglages → Général).</p>
-<h2>Prêts</h2>
+<h2 id="s7">Prêts</h2>
 <p>Gérer → Prêts : capital, taux annuel, durée, assurance. L&#x27;app calcule l&#x27;échéancier, les intérêts, le capital restant dû, simule un remboursement anticipé et peut créer la mensualité récurrente.</p>
-<h2>Abonnements</h2>
+<h2 id="s8">Abonnements</h2>
 <p>Gérer → Abonnements : les paiements qui reviennent au même rythme avec un montant stable (trois fois, ou deux pour un paiement annuel), leur coût par mois et par an, ceux qui semblent résiliés. « Planifier » crée l&#x27;échéance récurrente.</p>
-<h2>Objectifs d&#x27;épargne</h2>
+<h2 id="s9">Objectifs d&#x27;épargne</h2>
 <p>Un montant cible et une date : l&#x27;app indique le montant à mettre de côté par mois et la progression.</p>
-<h2>Devises</h2>
+<h2 id="s10">Devises</h2>
 <p>Les comptes en devises étrangères sont convertis avec les taux de référence de la BCE (Gérer → Devises → Mettre à jour). Sans taux pour une devise, ses comptes sont exclus des totaux et un avertissement s&#x27;affiche.</p>
-<h2>Cryptomonnaies</h2>
+<h2 id="s11">Cryptomonnaies</h2>
 <p>Gérer → Crypto : achats, ventes, frais, quantité ; valorisation avec les prix de CoinGecko, plus-value latente, alertes de seuil. Les prix peuvent aussi être saisis à la main.</p>
-<h2>Rapports</h2>
+<h2 id="s12">Rapports</h2>
 <p>Mensuel, répartition, structure 50/30/20, tendance, annuel, projection de trésorerie, santé financière et empreinte carbone. Choisissez la période (12 mois, 24 mois ou libre), filtrez par catégorie, imprimez ou exportez en PDF. Le menu « Créer » ouvre le Générateur (votre propre rapport : regroupement, mesure, filtres, enregistrement) et les Simulations (« et si… ? », épargne, prêt, survie financière).</p>
-<h2>Pièces jointes</h2>
+<h2 id="s13">Pièces jointes</h2>
 <p>Dans une transaction → Avancé : joignez un fichier ou scannez un ticket (le texte est lu sur votre Mac). Gérer → Pièces jointes liste tous les fichiers : recherche, tri par colonne, filtre par type ou compte, ouverture, affichage dans le Finder, accès à la transaction, détachement.</p>
-<h2>Partager un compte</h2>
+<h2 id="s14">Partager un compte</h2>
 <p>Clic droit sur un compte → Partager… Choisissez un dossier que l&#x27;autre personne peut ouvrir (iCloud Drive partagé, Dropbox, Syncthing), ajoutez-la et fixez ses droits : lecture seule, saisie (elle modifie ses propres lignes) ou modification de tout. L&#x27;invité choisit « Rejoindre un compte partagé… ». Chaque modification est signée : on ne peut ni se donner plus de droits ni falsifier le fichier. Comparez par téléphone la clé affichée de chaque côté. Seul ce compte est partagé.</p>
-<h2>Importer et exporter</h2>
+<h2 id="s15">Importer et exporter</h2>
 <p>Import CSV : un assistant montre les colonnes reconnues (date, montant ou débit/crédit, libellé…), laisse les corriger, inverser le signe ou lire les dates en mois/jour, et affiche un aperçu avec les totaux avant d&#x27;importer. « Enregistrer » mémorise la mise en page d&#x27;une banque : elle s&#x27;applique ensuite toute seule. Autres formats : OFX/QFX, QIF, MT940, CAMT.053, HomeBank (.xhb, .hbk), Actual Budget. Les doublons sont détectés : réimporter ne crée pas de doublons. Export : CSV (toutes les transactions ou un compte), QIF. Un dossier surveillé (Réglages → Données) importe automatiquement les relevés qui y sont déposés.</p>
-<h2>Sauvegardes automatiques</h2>
+<h2 id="s16">Sauvegardes automatiques</h2>
 <p>Réglages → Données : une copie du fichier par jour (mise à jour toutes les heures), les 14 derniers jours et une copie par mois, sur ce Mac uniquement. « Voir et restaurer… » ramène une copie ; vos données actuelles sont gardées à part.</p>
-<h2>Sauvegarde et restauration</h2>
-<p>Fichier → Sauvegarder les données… : copie complète, avec mot de passe facultatif (AES-256). Fichier → Restaurer une sauvegarde… recharge une copie ; vos données actuelles sont gardées de côté. Un mot de passe oublié ne peut pas être récupéré.</p>
-<h2>Synchroniser plusieurs Macs</h2>
+<h2 id="s17">Masquer les montants</h2>
+<p>Le bouton œil dans la barre du haut (⇧⌘H) remplace tous les montants par des points : écrans, tableaux, rappels, widgets et réponses de Siri. Les graphiques sont cachés (leurs axes donneraient les chiffres). Les exports de fichiers et les PDF, eux, gardent les vrais montants.</p>
+<h2 id="s18">Contrôle d&#x27;intégrité et journal</h2>
+<p>Gérer → Qualité des données. Le contrôle d&#x27;intégrité cherche ce qui est abîmé (doublons, catégories disparues, virements orphelins…) et le répare sans rien perdre ; Édition → Annuler défait une réparation. Le journal des modifications liste ce qui a changé et quand, et permet d&#x27;annuler une modification précise tant que les transactions concernées n&#x27;ont pas été touchées depuis. Il reste sur ce Mac.</p>
+<h2 id="s19">Mode découverte</h2>
+<p>Sur l&#x27;écran d&#x27;accueil, « Essayer avec des exemples » remplit l&#x27;app de données fictives ; « Supprimer les exemples » les retire sans toucher à vos propres données.</p>
+<h2 id="s20">Sauvegarde et restauration</h2>
+<p>Fichier → Sauvegarder les données… : copie complète, avec mot de passe facultatif (AES-256). Chaque sauvegarde est relue après écriture : si elle n&#x27;est pas conforme, elle est refusée et supprimée au lieu d&#x27;être annoncée comme réussie. Fichier → Restaurer une sauvegarde… recharge une copie (un fichier qui contient des transactions sans compte est signalé) ; vos données actuelles sont gardées de côté. Réglages → Données → Effacer toutes mes données… supprime tout, après une double confirmation. Un mot de passe oublié ne peut pas être récupéré.</p>
+<h2 id="s21">Synchroniser plusieurs Macs</h2>
 <p>Deux méthodes : activer iCloud (Réglages → Données), ou placer le dossier de données dans un dossier synchronisé (iCloud Drive, Dropbox, Syncthing). Les modifications simultanées sont fusionnées élément par élément. Sur un nouveau Mac, « Restaurer depuis iCloud » est proposé à l&#x27;ouverture.</p>
-<h2>Sécurité</h2>
+<h2 id="s22">Sécurité</h2>
 <p>Réglages → Sécurité : verrouillage par Touch ID ou mot de passe du Mac, avec délai. Le fichier de données n&#x27;est lisible que par votre session. Les clés bancaires sont dans le Trousseau. Les liens pocketledger://add demandent toujours votre confirmation.</p>
-<h2>Mises à jour</h2>
+<h2 id="s23">Mises à jour</h2>
 <p>Réglages → Général → Mises à jour : la vérification automatique est désactivée tant que vous ne l&#x27;activez pas ; « Rechercher maintenant » et le menu Pocket Ledger → Rechercher les mises à jour… vérifient à la demande. Cochez « Recevoir aussi les versions bêta » pour tester les nouveautés avant tout le monde. Chaque mise à jour est signée : l&#x27;app refuse une archive modifiée. Si la section indique que les mises à jour ne sont pas activées, téléchargez la nouvelle version auprès de l&#x27;éditeur.</p>
-<h2>Rappels, barre de menus et Spotlight</h2>
+<h2 id="s24">Rappels, barre de menus et Spotlight</h2>
 <p>Réglages → Général : rappels la veille d&#x27;une échéance (9 h), quand une enveloppe est dépassée ou qu&#x27;un compte passe sous son minimum ; saisie rapide dans la barre de menus ; recherche Spotlight de vos transactions (désactivée par défaut). Dans Pièces jointes, la barre espace ouvre l&#x27;aperçu rapide.</p>
-<h2>Widgets, Siri et Raccourcis</h2>
-<p>Ajoutez les widgets Patrimoine et Budgets au Bureau ou au Centre de notifications. Dites « Ajoute une dépense dans Pocket Ledger » à Siri, ou utilisez les actions de l&#x27;app Raccourcis. Les liens pocketledger://open?screen=budget ouvrent un écran précis.</p>
-<h2>Raccourcis clavier</h2>
+<h2 id="s25">Widgets, Siri et Raccourcis</h2>
+<p>Ajoutez les widgets Patrimoine et Budgets au Bureau ou au Centre de notifications. Dites « Ajoute une dépense dans Pocket Ledger » à Siri, ou utilisez les actions de l&#x27;app Raccourcis. Le widget « Où part l&#x27;argent » montre la répartition du mois, avec un bouton + pour saisir une transaction. Les liens pocketledger://open?screen=budget ouvrent un écran précis.</p>
+<h2 id="s26">Raccourcis clavier</h2>
 <p>⌘N nouvelle transaction · ⌘K aller à… · ⌘1 à ⌘5 onglets · ⌘[ et ⌘] retour et avance · ⌥⌘Z annuler · ⇧⌥⌘Z rétablir · ⌘, réglages · ⌘? aide.</p>
-<h2>Problèmes courants</h2>
-<ul><li>Un montant s&#x27;affiche dans la mauvaise devise : vérifiez la devise du compte (Modifier le compte) et la devise principale (Réglages → Général).</li><li>Des comptes manquent dans les totaux : mettez à jour les taux (Gérer → Devises).</li><li>L&#x27;import crée des doublons : choisissez le bon compte avant d&#x27;importer ; les doublons exacts sont ignorés.</li><li>iCloud indisponible : il faut l&#x27;application signée avec Xcode et une session iCloud ouverte (Réglages Système).</li><li>Un fichier de partage est introuvable : le dossier partagé n&#x27;est pas encore synchronisé sur ce Mac.</li><li>Données illisibles au lancement : l&#x27;app met le fichier de côté (ledger.unreadable-…) sans l&#x27;écraser ; restaurez une sauvegarde.</li></ul>
-<h2>Glossaire</h2>
+<h2 id="s27">Problèmes courants</h2>
+<ul><li>L&#x27;app ne s&#x27;ouvre pas sur un Mac plus ancien : elle demande macOS 14 minimum.</li><li>Un montant s&#x27;affiche dans la mauvaise devise : vérifiez la devise du compte (Modifier le compte) et la devise principale (Réglages → Général).</li><li>Des comptes manquent dans les totaux : mettez à jour les taux (Gérer → Devises).</li><li>L&#x27;import crée des doublons : choisissez le bon compte avant d&#x27;importer ; les doublons exacts sont ignorés.</li><li>iCloud indisponible : il faut l&#x27;application signée avec Xcode et une session iCloud ouverte (Réglages Système).</li><li>Un fichier de partage est introuvable : le dossier partagé n&#x27;est pas encore synchronisé sur ce Mac.</li><li>Données illisibles au lancement : l&#x27;app met le fichier de côté (ledger.unreadable-…) sans l&#x27;écraser ; restaurez une sauvegarde.</li></ul>
+<h2 id="s28">Glossaire</h2>
 <p>Enveloppe : somme prévue pour une catégorie sur un mois. Report : reste d&#x27;un mois ajouté au suivant. Pointage : marquer une transaction vue sur le relevé. Rapprochement : vérifier que le solde correspond au relevé. Ventilation : répartir une transaction sur plusieurs catégories. Plus-value latente : gain non encore réalisé.</p>
-<h2>Aide et contact</h2>
-<p>Écrivez à <a href="mailto:atxgrp@gmail.com">atxgrp@gmail.com</a> en précisant la version (menu Pocket Ledger → À propos) et ce que vous faisiez.</p></main>
-<footer>© 2026 ATX Grp · <a href="mailto:atxgrp@gmail.com">atxgrp@gmail.com</a> · <a href="../legal/">Mentions légales</a> · <a href="../credits/">Crédits</a></footer></body></html>
+<h2 id="s29">Aide et contact</h2>
+<p>Écrivez à <a href="mailto:atxgrp@gmail.com">atxgrp@gmail.com</a> en précisant la version (menu Pocket Ledger → À propos) et ce que vous faisiez.</p></div></main>
+<footer><div class="wrap"><div class="fcols"><div><b>Pocket Ledger</b>Budget et comptes pour Mac. Gratuit, sans publicité, vos données restent chez vous.</div><div><b>Produit</b><a href="../features/">Fonctions</a><a href="../security/">Sécurité</a><a href="../roadmap/">Feuille de route</a><a href="../changelog/">Nouveautés</a></div><div><b>Contact</b><a href="mailto:atxgrp@gmail.com">atxgrp@gmail.com</a><a href="../support/">Support</a></div><div><b>Ressources</b><a href="../help/">Aide</a><a href="../accessibility/">Accessibilité</a><a href="../about/">À propos</a></div></div><div class="legal">© 2026 ATX Grp · <a href="../privacy/">Confidentialité</a> · <a href="../terms/">Conditions</a> · <a href="../legal/">Mentions légales</a> · <a href="../credits/">Crédits</a><p>Pocket Ledger est indépendant : il n&#x27;est ni affilié à Apple ni approuvé par Apple. Mac et macOS sont des marques d&#x27;Apple Inc.</p></div></div></footer></body></html>
