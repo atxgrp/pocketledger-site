@@ -47,16 +47,28 @@ h1,h2,h3{text-wrap:balance}
 p,li{text-wrap:pretty}
 nav a,.lang-switch,.fcols a,.crumb a,summary{min-height:44px;display:inline-flex;align-items:center}
 .fcols a{display:flex}
-.btn{min-height:44px;display:inline-flex;align-items:center;transition:transform .18s ease,box-shadow .18s ease,background-color .18s ease}
-.btn:not(.off):hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(79,70,229,.25)}
-a.card{transition:border-color .18s ease,transform .18s ease,box-shadow .18s ease}
-a.card:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.10)}
+/* same language as the apps: continuous 20px cards, indigo gradient hero, 150ms ease-out press feedback (scale .97) */
+:root{--ease:cubic-bezier(.23,1,.32,1)}
+.card{border-radius:20px}.tile{border-radius:14px}
+h1,.hero h1{letter-spacing:-.025em}h2{letter-spacing:-.02em}
+.btn{min-height:44px;display:inline-flex;align-items:center;transition:transform .15s var(--ease),box-shadow .18s ease,background-color .18s ease}
+.btn:not(.off):active,a.card:active{transform:scale(.97)}
+@media(hover:hover) and (pointer:fine){.btn:not(.off):hover{box-shadow:0 6px 16px rgba(79,70,229,.25)}a.card:hover{box-shadow:0 10px 26px rgba(0,0,0,.10);border-color:var(--accent)}}
+a.card{transition:border-color .18s ease,transform .15s var(--ease),box-shadow .18s ease}
+.hero{background:linear-gradient(135deg,#4A3FD0,#6B5CF2);color:#fff;border-radius:28px;padding:56px 24px 0;margin-top:24px;overflow:hidden;box-shadow:0 14px 40px rgba(74,63,208,.28)}
+.hero .lead,.hero .muted,.hero .note{color:rgba(255,255,255,.85)}
+.hero a:not(.btn){color:#fff}
+.hero .badge{background:rgba(255,255,255,.2);color:#fff}
+.hero .btn:not(.soft):not(.off){background:#fff;color:#4A3FD0}
+.hero .btn.soft{color:#fff;border-color:rgba(255,255,255,.7)}
+.hero .btn.off{background:rgba(255,255,255,.2);color:rgba(255,255,255,.85)}
+.hero .shot,.hero img{display:block;margin:28px auto 0;border-radius:16px 16px 0 0;box-shadow:0 -4px 30px rgba(0,0,0,.2)}
 summary{cursor:pointer}
 .shot{aspect-ratio:1206/2000;height:auto}
 .shot[src*="dashboard"],.shot[src*="budget"],.shot[src*="csv"],.shot[src*="reports"],.shot[src*="integrity"]{aspect-ratio:auto}
 /* phones: the seven links scroll sideways in one tidy row instead of wrapping on three lines */
 @media(max-width:720px){header .wrap{flex-wrap:wrap}nav{order:3;flex:1 0 100%;flex-wrap:nowrap;overflow-x:auto;gap:2px 16px;padding-bottom:2px;scrollbar-width:none}nav::-webkit-scrollbar{display:none}nav a{white-space:nowrap}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}.btn:not(.off):hover,a.card:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}.btn:not(.off):active,a.card:active{transform:none}}
 </style><script>(function(){try{var s=localStorage.plLang;var want=s||((navigator.language||'en').toLowerCase().indexOf('fr')==0?'fr':'en');if(want!=='en'){location.replace('../../features/');}}catch(e){}})();</script></head>
 <body><a class="skip" href="#main">Skip to content</a><header><div class="wrap"><a class="brand" href="../../en/"><img src="../../img/icon.png" alt="" width="30" height="30">Pocket Ledger</a><nav><a href="../../en/features/" aria-current=page>Features</a><a href="../../en/security/">Security</a><a href="../../en/help/">Help</a><a href="../../en/roadmap/">Roadmap</a><a href="../../en/changelog/">What's new</a><a href="../../en/support/">Support</a><a href="../../en/about/">About</a></nav><a class="lang-switch" href="../../features/" hreflang="fr" lang="fr" onclick="try{localStorage.plLang='fr'}catch(e){}">Français</a></div></header>
 <main id="main"><div class="page"><h1>Features</h1><p class="lead">Short deep-dives into what needs more room than the home page.</p><div class="grid"><a class="card" href="../../en/features/budgets/"><h3>Envelopes and budgets</h3><p>Know what is left, month by month.</p><span class="more">Learn more →</span></a><a class="card" href="../../en/features/imports/"><h3>Import and export</h3><p>Your statements, no third-party service.</p><span class="more">Learn more →</span></a><a class="card" href="../../en/features/reports/"><h3>Reports and financial health</h3><p>See where the money goes.</p><span class="more">Learn more →</span></a><a class="card" href="../../en/features/sharing/"><h3>Shared account</h3><p>A joint account, precise rights.</p><span class="more">Learn more →</span></a><a class="card" href="../../en/features/backups/"><h3>Backups and integrity</h3><p>Always able to go back.</p><span class="more">Learn more →</span></a></div></div></main>
