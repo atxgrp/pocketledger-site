@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Legal notice — Pocket Ledger</title><meta name="description" content=""><meta name="color-scheme" content="light dark"><link rel="alternate" hreflang="fr" href="../../legal/"><link rel="alternate" hreflang="en" href="../../en/legal/"><link rel="icon" href="../../img/icon.png"><style>
+<title>Legal notice — Pocket Ledger</title><meta name="description" content=""><meta name="color-scheme" content="light dark"><meta name="theme-color" content="#4F46E5" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#1c1c1e" media="(prefers-color-scheme: dark)"><link rel="alternate" hreflang="fr" href="../../legal/"><link rel="alternate" hreflang="en" href="../../en/legal/"><link rel="icon" href="../../img/icon.png"><style>
 :root{--accent:#4F46E5;--accent-soft:#eceafd;--bg:#fafafa;--fg:#1c1c1e;--muted:#6b6b70;--card:#fff;--line:#e5e5ea;--max:1080px}
 @media(prefers-color-scheme:dark){:root{--accent:#8b8bff;--accent-soft:#2a2a4a;--bg:#1c1c1e;--fg:#f2f2f7;--muted:#a1a1a6;--card:#2c2c2e;--line:#3a3a3c}.btn:not(.soft):not(.off){color:#14142b}}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
+*{box-sizing:border-box}@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
 body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text",Helvetica,Arial,sans-serif}
 a{color:var(--accent)}.muted{color:var(--muted)}code{background:var(--accent-soft);padding:1px 6px;border-radius:6px;font-size:.9em}
 .skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;background:var(--card);padding:8px 12px;border-radius:8px;z-index:20}
@@ -38,6 +38,25 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:34px 0 40px;colo
 .fcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:22px}.fcols b{display:block;color:var(--fg);margin-bottom:6px}.fcols a{display:block;color:var(--muted);text-decoration:none;margin:3px 0}.fcols a:hover{color:var(--accent)}
 .legal{margin-top:24px;border-top:1px solid var(--line);padding-top:16px}
 @media(max-width:640px){header .wrap{gap:8px}.hero{padding-top:34px}section{padding:28px 0}}
+
+/* Apple HIG + UI/UX Pro Max review: visible keyboard focus, 44px touch targets, calm motion, balanced headings */
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.tile{width:44px;height:44px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:10px}
+.ico{width:24px;height:24px}
+h1,h2,h3{text-wrap:balance}
+p,li{text-wrap:pretty}
+nav a,.lang-switch,.fcols a,.crumb a,summary{min-height:44px;display:inline-flex;align-items:center}
+.fcols a{display:flex}
+.btn{min-height:44px;display:inline-flex;align-items:center;transition:transform .18s ease,box-shadow .18s ease,background-color .18s ease}
+.btn:not(.off):hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(79,70,229,.25)}
+a.card{transition:border-color .18s ease,transform .18s ease,box-shadow .18s ease}
+a.card:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.10)}
+summary{cursor:pointer}
+.shot{aspect-ratio:1206/2000;height:auto}
+.shot[src*="dashboard"],.shot[src*="budget"],.shot[src*="csv"],.shot[src*="reports"],.shot[src*="integrity"]{aspect-ratio:auto}
+/* phones: the seven links scroll sideways in one tidy row instead of wrapping on three lines */
+@media(max-width:720px){header .wrap{flex-wrap:wrap}nav{order:3;flex:1 0 100%;flex-wrap:nowrap;overflow-x:auto;gap:2px 16px;padding-bottom:2px;scrollbar-width:none}nav::-webkit-scrollbar{display:none}nav a{white-space:nowrap}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}.btn:not(.off):hover,a.card:hover{transform:none}}
 </style><script>(function(){try{var s=localStorage.plLang;var want=s||((navigator.language||'en').toLowerCase().indexOf('fr')==0?'fr':'en');if(want!=='en'){location.replace('../../legal/');}}catch(e){}})();</script></head>
 <body><a class="skip" href="#main">Skip to content</a><header><div class="wrap"><a class="brand" href="../../en/"><img src="../../img/icon.png" alt="" width="30" height="30">Pocket Ledger</a><nav><a href="../../en/features/">Features</a><a href="../../en/security/">Security</a><a href="../../en/help/">Help</a><a href="../../en/roadmap/">Roadmap</a><a href="../../en/changelog/">What's new</a><a href="../../en/support/">Support</a><a href="../../en/about/">About</a></nav><a class="lang-switch" href="../../legal/" hreflang="fr" lang="fr" onclick="try{localStorage.plLang='fr'}catch(e){}">Français</a></div></header>
 <main id="main"><div class="page"><h1>Legal notice</h1><p>Software publisher: ATX Grp</p>
