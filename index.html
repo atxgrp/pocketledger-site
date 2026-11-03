@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Pocket Ledger — budget et comptes pour Mac</title><meta name="description" content="Une vraie application Mac pour votre budget et vos comptes : gratuite, sans publicité, sans compte à créer. Vos données restent sur votre Mac."><meta name="color-scheme" content="light dark"><meta name="theme-color" content="#4A3FD0" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#1c1c1e" media="(prefers-color-scheme: dark)"><link rel="alternate" hreflang="fr" href=""><link rel="alternate" hreflang="en" href="en/"><link rel="icon" href="img/icon.png"><style>
+<title>Pocket Ledger — budget et comptes pour Mac</title><meta name="description" content="Une vraie application Mac pour votre budget et vos comptes : gratuite, sans publicité, sans compte à créer. Vos données restent sur votre Mac."><meta name="color-scheme" content="dark"><meta name="theme-color" content="#000000"><link rel="alternate" hreflang="fr" href=""><link rel="alternate" hreflang="en" href="en/"><link rel="icon" href="img/icon.png"><style>
 :root{--accent:#4A3FD0;--accent-soft:#eceafd;--bg:#fafafa;--fg:#1c1c1e;--muted:#6b6b70;--card:#fff;--line:#e5e5ea;--max:1080px}
 @media(prefers-color-scheme:dark){:root{--accent:#968dff;--accent-soft:#2a2a4a;--bg:#1c1c1e;--fg:#f2f2f7;--muted:#a1a1a6;--card:#2c2c2e;--line:#3a3a3c}.btn:not(.soft):not(.off){color:#14142b}}
 *{box-sizing:border-box}@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
@@ -69,6 +69,24 @@ summary{cursor:pointer}
 /* phones: the seven links scroll sideways in one tidy row instead of wrapping on three lines */
 @media(max-width:720px){header .wrap{flex-wrap:wrap}nav{order:3;flex:1 0 100%;flex-wrap:nowrap;overflow-x:auto;gap:2px 16px;padding-bottom:2px;scrollbar-width:none}nav::-webkit-scrollbar{display:none}nav a{white-space:nowrap}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}.btn:not(.off):active,a.card:active{transform:none}}
+/* Night look (inspired by the calm, black, pill-button style of hardware-wallet apps): black canvas, 5 % white cards, white pill buttons,
+   mono uppercase eyebrow labels, tight headlines, blurred header. One look in light and dark system modes. */
+:root,:root{--accent:#968dff;--accent-soft:rgba(150,141,255,.14);--bg:#000;--fg:#fff;--muted:#a1a1a6;--card:rgba(255,255,255,.05);--line:rgba(255,255,255,.1)}
+html{color-scheme:dark}
+header{background:rgba(0,0,0,.6);backdrop-filter:blur(40px);-webkit-backdrop-filter:blur(40px);border-bottom:1px solid var(--line)}
+h1,h2,h3,.hero h1{font-weight:600;letter-spacing:-.035em}
+.hero h1{font-size:clamp(36px,7vw,64px);line-height:1.04}
+.btn:not(.soft):not(.off){background:#fff;color:#000;font-weight:500}
+.btn.soft{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.35)}
+.btn.off{background:rgba(255,255,255,.08);color:var(--muted)}
+.card,details{background:var(--card);border:1px solid rgba(255,255,255,.08);box-shadow:none}
+.tile,.chips span{background:rgba(255,255,255,.08);color:#fff}
+.badge,.hero .badge{background:rgba(255,255,255,.1);color:#fff;border-radius:4px;padding:4px 8px;font:500 12px/18px ui-monospace,"SF Mono",Menlo,monospace;letter-spacing:.04em;text-transform:uppercase}
+.hero{background:radial-gradient(120% 90% at 50% -10%,rgba(94,80,234,.45),rgba(0,0,0,0) 62%),#050507;border:1px solid rgba(255,255,255,.08);box-shadow:none;color:#fff}
+.hero .btn:not(.soft):not(.off){background:#fff;color:#000}
+.hero .btn.soft{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.35)}
+.stat b{color:#fff;letter-spacing:-.04em}
+@media(hover:hover) and (pointer:fine){.btn:not(.off):hover{box-shadow:0 6px 24px rgba(150,141,255,.3)}a.card:hover{box-shadow:none;border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.08)}}
 </style><script>(function(){try{var s=localStorage.plLang;var want=s||((navigator.language||'en').toLowerCase().indexOf('fr')==0?'fr':'en');if(want!=='fr'){location.replace('en/');}}catch(e){}})();</script></head>
 <body><a class="skip" href="#main">Aller au contenu</a><header><div class="wrap"><a class="brand" href="./"><img src="img/icon.png" alt="" width="30" height="30">Pocket Ledger</a><nav><a href="features/">Fonctions</a><a href="security/">Sécurité</a><a href="help/">Aide</a><a href="roadmap/">Feuille de route</a><a href="changelog/">Nouveautés</a><a href="support/">Support</a><a href="about/">À propos</a></nav><a class="lang-switch" href="en/" hreflang="en" lang="en" onclick="try{localStorage.plLang='en'}catch(e){}">English</a></div></header>
 <main id="main">

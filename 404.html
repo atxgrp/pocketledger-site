@@ -67,4 +67,22 @@ summary{cursor:pointer}
 /* phones: the seven links scroll sideways in one tidy row instead of wrapping on three lines */
 @media(max-width:720px){header .wrap{flex-wrap:wrap}nav{order:3;flex:1 0 100%;flex-wrap:nowrap;overflow-x:auto;gap:2px 16px;padding-bottom:2px;scrollbar-width:none}nav::-webkit-scrollbar{display:none}nav a{white-space:nowrap}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}.btn:not(.off):active,a.card:active{transform:none}}
+/* Night look (inspired by the calm, black, pill-button style of hardware-wallet apps): black canvas, 5 % white cards, white pill buttons,
+   mono uppercase eyebrow labels, tight headlines, blurred header. One look in light and dark system modes. */
+:root,:root{--accent:#968dff;--accent-soft:rgba(150,141,255,.14);--bg:#000;--fg:#fff;--muted:#a1a1a6;--card:rgba(255,255,255,.05);--line:rgba(255,255,255,.1)}
+html{color-scheme:dark}
+header{background:rgba(0,0,0,.6);backdrop-filter:blur(40px);-webkit-backdrop-filter:blur(40px);border-bottom:1px solid var(--line)}
+h1,h2,h3,.hero h1{font-weight:600;letter-spacing:-.035em}
+.hero h1{font-size:clamp(36px,7vw,64px);line-height:1.04}
+.btn:not(.soft):not(.off){background:#fff;color:#000;font-weight:500}
+.btn.soft{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.35)}
+.btn.off{background:rgba(255,255,255,.08);color:var(--muted)}
+.card,details{background:var(--card);border:1px solid rgba(255,255,255,.08);box-shadow:none}
+.tile,.chips span{background:rgba(255,255,255,.08);color:#fff}
+.badge,.hero .badge{background:rgba(255,255,255,.1);color:#fff;border-radius:4px;padding:4px 8px;font:500 12px/18px ui-monospace,"SF Mono",Menlo,monospace;letter-spacing:.04em;text-transform:uppercase}
+.hero{background:radial-gradient(120% 90% at 50% -10%,rgba(94,80,234,.45),rgba(0,0,0,0) 62%),#050507;border:1px solid rgba(255,255,255,.08);box-shadow:none;color:#fff}
+.hero .btn:not(.soft):not(.off){background:#fff;color:#000}
+.hero .btn.soft{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.35)}
+.stat b{color:#fff;letter-spacing:-.04em}
+@media(hover:hover) and (pointer:fine){.btn:not(.off):hover{box-shadow:0 6px 24px rgba(150,141,255,.3)}a.card:hover{box-shadow:none;border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.08)}}
 </style><div class="page"><h1>404</h1><p class="lead">Page introuvable · Page not found</p><p><a class="btn" href="https://atxgrp.github.io/pocketledger-site/">Pocket Ledger</a></p></div>
