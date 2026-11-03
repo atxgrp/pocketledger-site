@@ -87,6 +87,27 @@ h1,h2,h3,.hero h1{font-weight:600;letter-spacing:-.035em}
 .hero .btn.soft{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.35)}
 .stat b{color:#fff;letter-spacing:-.04em}
 @media(hover:hover) and (pointer:fine){.btn:not(.off):hover{box-shadow:0 6px 24px rgba(150,141,255,.3)}a.card:hover{box-shadow:none;border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.08)}}
+/* Ledger-like structure: left-aligned two-column hero, centred nav with a white language pill, stat strip, bigger left-aligned section titles */
+header nav{flex:1;justify-content:center}
+header nav a{font-size:14px;font-weight:500}
+header a.lang-switch{background:#fff;color:#000!important;border:0;border-radius:999px;padding:0 16px;font-weight:500;text-decoration:none}
+.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);column-gap:48px;text-align:left;align-items:center;padding:56px 48px 0;margin-top:28px;border-radius:32px}
+.hero>*{grid-column:1}
+.hero>img,.hero>picture,.hero>.shot{grid-column:2;grid-row:1/9;align-self:end;margin:0;border-radius:20px 20px 0 0}
+.hero h1{margin:.2em 0 .3em;max-width:none;font-size:clamp(36px,5.2vw,64px)}
+.hero .lead{margin:0 0 18px;max-width:30em}
+.hero p{margin-left:0}
+.hero .badge{justify-self:start}
+@media(max-width:860px){.hero{grid-template-columns:1fr;padding:36px 22px 0}.hero>img,.hero>picture,.hero>.shot{grid-column:1;grid-row:auto;margin-top:26px}}
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin:22px 0 8px;border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.strip .stat{text-align:left;padding:20px 24px;border-left:1px solid var(--line);color:var(--muted);font-size:15px}.strip .stat:first-child{border-left:0}
+.strip .stat b{font-size:clamp(26px,3.4vw,38px);line-height:1.1;margin-bottom:4px}
+section{padding:56px 0}
+section>h2{font-size:clamp(28px,4vw,44px);line-height:1.08;margin:0 0 6px}
+.card{border-radius:24px;padding:26px}
+.grid{gap:14px}
+summary{font-size:18px;font-weight:500}
+details{border-radius:20px;padding:6px 24px}
 </style><script>(function(){try{var s=localStorage.plLang;var want=s||((navigator.language||'en').toLowerCase().indexOf('fr')==0?'fr':'en');if(want!=='en'){location.replace('../../help/');}}catch(e){}})();</script></head>
 <body><a class="skip" href="#main">Skip to content</a><header><div class="wrap"><a class="brand" href="../../en/"><img src="../../img/icon.png" alt="" width="30" height="30">Pocket Ledger</a><nav><a href="../../en/features/">Features</a><a href="../../en/security/">Security</a><a href="../../en/help/" aria-current=page>Help</a><a href="../../en/roadmap/">Roadmap</a><a href="../../en/changelog/">What's new</a><a href="../../en/support/">Support</a><a href="../../en/about/">About</a></nav><a class="lang-switch" href="../../help/" hreflang="fr" lang="fr" onclick="try{localStorage.plLang='fr'}catch(e){}">Français</a></div></header>
 <main id="main"><div class="page"><h1>Help</h1><p class="lead">The complete Pocket Ledger guide.</p><ul class="toc"><li><a href="#s0">Getting started</a></li><li><a href="#s1">Accounts</a></li><li><a href="#s2">Transactions</a></li><li><a href="#s3">Categories, tags, payees</a></li><li><a href="#s4">Automatic rules</a></li><li><a href="#s5">Budget</a></li><li><a href="#s6">Recurring items</a></li><li><a href="#s7">Loans</a></li><li><a href="#s8">Subscriptions</a></li><li><a href="#s9">Savings goals</a></li><li><a href="#s10">Currencies</a></li><li><a href="#s11">Cryptocurrencies</a></li><li><a href="#s12">Reports</a></li><li><a href="#s13">Attachments</a></li><li><a href="#s14">Sharing an account</a></li><li><a href="#s15">Import and export</a></li><li><a href="#s16">Automatic backups</a></li><li><a href="#s17">Hide amounts</a></li><li><a href="#s18">Integrity check and journal</a></li><li><a href="#s19">Discovery mode</a></li><li><a href="#s20">Backup and restore</a></li><li><a href="#s21">Syncing several Macs</a></li><li><a href="#s22">Security</a></li><li><a href="#s23">Updates</a></li><li><a href="#s24">Reminders, menu bar and Spotlight</a></li><li><a href="#s25">Widgets, Siri and Shortcuts</a></li><li><a href="#s26">Keyboard shortcuts</a></li><li><a href="#s27">Common problems</a></li><li><a href="#s28">Glossary</a></li><li><a href="#s29">Help and contact</a></li></ul><h2 id="s0">Getting started</h2>
