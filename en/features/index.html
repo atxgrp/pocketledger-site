@@ -1,126 +1,119 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Features — Pocket Ledger</title><meta name="description" content="Short deep-dives into what needs more room than the home page."><meta name="color-scheme" content="dark"><meta name="theme-color" content="#000000"><link rel="alternate" hreflang="fr" href="../../features/"><link rel="alternate" hreflang="en" href="../../en/features/"><link rel="icon" href="../../img/icon.png"><style>
-:root{--accent:#4A3FD0;--accent-soft:#eceafd;--bg:#fafafa;--fg:#1c1c1e;--muted:#6b6b70;--card:#fff;--line:#e5e5ea;--max:1080px}
-@media(prefers-color-scheme:dark){:root{--accent:#968dff;--accent-soft:#2a2a4a;--bg:#1c1c1e;--fg:#f2f2f7;--muted:#a1a1a6;--card:#2c2c2e;--line:#3a3a3c}.btn:not(.soft):not(.off){color:#14142b}}
-*{box-sizing:border-box}@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
-body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text",Helvetica,Arial,sans-serif}
-a{color:var(--accent)}.muted{color:var(--muted)}code{background:var(--accent-soft);padding:1px 6px;border-radius:6px;font-size:.9em}
-.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;background:var(--card);padding:8px 12px;border-radius:8px;z-index:20}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
-header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-header .wrap{display:flex;align-items:center;gap:18px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
-header a.brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--fg);text-decoration:none;font-size:19px}
-header a.brand img{width:30px;height:30px;border-radius:7px}
-nav{display:flex;gap:4px 18px;flex-wrap:wrap;flex:1}nav a{color:var(--muted);text-decoration:none;font-size:15px}nav a:hover,nav a[aria-current]{color:var(--accent)}
-.lang-switch{border:1px solid var(--line);border-radius:999px;padding:3px 12px;color:var(--fg)!important;text-decoration:none;font-size:14px}
-.btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 24px;border-radius:999px;text-decoration:none;font-weight:600;margin:6px 10px 6px 0}
-.btn.off{background:var(--line);color:var(--muted);cursor:default}.btn.soft{background:transparent;color:var(--accent);border:1px solid var(--accent)}
-.hero{padding:56px 0 24px;text-align:center}.hero h1{font-size:clamp(34px,6vw,56px);line-height:1.08;margin:.1em auto .3em;max-width:16em;letter-spacing:-.02em}
-.hero .lead{font-size:clamp(18px,2.4vw,22px);max-width:36em;margin:0 auto 14px;color:var(--muted)}
-.badge{display:inline-block;background:var(--accent-soft);color:var(--accent);border-radius:999px;padding:4px 14px;font-size:14px;font-weight:600}
-.shot{display:block;max-width:100%;height:auto;border-radius:14px;border:1px solid var(--line);box-shadow:0 18px 50px rgba(0,0,0,.18);margin:26px auto}
-section{padding:42px 0}section h2{font-size:clamp(26px,4vw,34px);line-height:1.15;margin:0 0 .4em;letter-spacing:-.01em}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin-top:22px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 22px}
-.card h3{margin:.1em 0 .3em;font-size:18px}.card p{margin:0;color:var(--muted);font-size:15.5px}
-a.card{text-decoration:none;color:inherit;display:block}a.card:hover{border-color:var(--accent)}a.card .more{color:var(--accent);font-size:15px;display:inline-block;margin-top:8px}
-.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;align-items:center}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.chips span{background:var(--accent-soft);color:var(--accent);padding:6px 14px;border-radius:999px;font-weight:600;font-size:14px}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin-top:18px}.stat{text-align:center}.stat b{display:block;font-size:34px;color:var(--accent)}
-details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:4px 20px;margin:10px 0}summary{cursor:pointer;font-weight:600;padding:12px 0}details p{margin:0 0 14px;color:var(--muted)}
-.cta{text-align:center;background:var(--accent-soft);border-radius:26px;padding:40px 20px;margin:30px 0}
-.page{max-width:760px;margin:0 auto;padding:36px 20px}.page h1{font-size:clamp(30px,5vw,40px);line-height:1.12;margin:.2em 0 .1em;letter-spacing:-.01em}
-.page h2{font-size:23px;margin:1.6em 0 .3em}.page h3{font-size:18px;margin:1.2em 0 .2em}.page .lead{font-size:20px;color:var(--muted)}
-.toc{display:flex;flex-wrap:wrap;gap:6px 14px;margin:14px 0 4px;padding:0;list-style:none}.toc a{font-size:15px;text-decoration:none}
-.page ul{padding-left:1.2em}li{margin:.25em 0}.crumb{font-size:15px}
-footer{border-top:1px solid var(--line);margin-top:40px;padding:34px 0 40px;color:var(--muted);font-size:14.5px}
-.fcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:22px}.fcols b{display:block;color:var(--fg);margin-bottom:6px}.fcols a{display:block;color:var(--muted);text-decoration:none;margin:3px 0}.fcols a:hover{color:var(--accent)}
-.legal{margin-top:24px;border-top:1px solid var(--line);padding-top:16px}
-@media(max-width:640px){header .wrap{gap:8px}.hero{padding-top:34px}section{padding:28px 0}}
-
-/* Apple HIG + UI/UX Pro Max review: visible keyboard focus, 44px touch targets, calm motion, balanced headings */
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
-.tile{width:44px;height:44px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:10px}
-.ico{width:24px;height:24px}
-h1,h2,h3{text-wrap:balance}
+<title>Features — Pocket Ledger</title><meta name="description" content="Eight families, from the current account to the mortgage."><meta name="color-scheme" content="light dark"><meta name="theme-color" content="#f7f7f9" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#0c0c10" media="(prefers-color-scheme: dark)"><link rel="alternate" hreflang="fr" href="../../features/"><link rel="alternate" hreflang="en" href="../../en/features/"><link rel="icon" href="../../img/icon.png"><style>/* Pocket Ledger site: one calm system, light and dark follow the device. Tokens first, components after. */
+:root{
+  --accent:#4A3FD0;--accent-fg:#fff;--accent-soft:#eeedfc;
+  --bg:#f7f7f9;--surface:#fff;--fg:#16161a;--muted:#5c5c66;--line:#e2e2e8;
+  --pos:#157853;--neg:#b3261e;--warn:#9a5b00;
+  --r-s:10px;--r-m:16px;--r-l:24px;--max:1120px;
+  --s1:4px;--s2:8px;--s3:16px;--s4:24px;--s5:48px;--s6:80px;
+  --ease:cubic-bezier(.23,1,.32,1);
+  color-scheme:light dark;
+}
+@media(prefers-color-scheme:dark){:root{
+  --accent:#a39cff;--accent-fg:#12121c;--accent-soft:#25234d;
+  --bg:#0c0c10;--surface:#16161c;--fg:#f4f4f7;--muted:#a6a6b2;--line:#2a2a34;
+  --pos:#4bd08a;--neg:#ff8a80;--warn:#f0b35a}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 -apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3{text-wrap:balance;line-height:1.12;letter-spacing:-.025em;font-weight:650;margin:0}
 p,li{text-wrap:pretty}
-nav a,.lang-switch,.fcols a,.crumb a,summary{min-height:44px;display:inline-flex;align-items:center}
-.fcols a{display:flex}
-/* same language as the apps: continuous 20px cards, indigo gradient hero, 150ms ease-out press feedback (scale .97) */
-:root{--ease:cubic-bezier(.23,1,.32,1)}
-.card{border-radius:20px}.tile{border-radius:14px}
-h1,.hero h1{letter-spacing:-.025em}h2{letter-spacing:-.02em}
-.btn{min-height:44px;display:inline-flex;align-items:center;transition:transform .15s var(--ease),box-shadow .18s ease,background-color .18s ease}
-.btn:not(.off):active,a.card:active{transform:scale(.97)}
-@media(hover:hover) and (pointer:fine){.btn:not(.off):hover{box-shadow:0 6px 16px rgba(74,63,208,.25)}a.card:hover{box-shadow:0 10px 26px rgba(0,0,0,.10);border-color:var(--accent)}}
-a.card{transition:border-color .18s ease,transform .15s var(--ease),box-shadow .18s ease}
-.hero{background:linear-gradient(135deg,#4A3FD0,#6B5CF2);color:#fff;border-radius:28px;padding:56px 24px 0;margin-top:24px;overflow:hidden;box-shadow:0 14px 40px rgba(74,63,208,.28)}
-.hero .lead,.hero .muted,.hero .note{color:rgba(255,255,255,.85)}
-.hero a:not(.btn){color:#fff}
-.hero .badge{background:rgba(255,255,255,.2);color:#fff}
-.hero .btn:not(.soft):not(.off){background:#fff;color:#4A3FD0}
-.hero .btn.soft{color:#fff;border-color:rgba(255,255,255,.7)}
-.hero .btn.off{background:rgba(255,255,255,.2);color:rgba(255,255,255,.85)}
-.hero .shot,.hero img{display:block;margin:28px auto 0;border-radius:16px 16px 0 0;box-shadow:0 -4px 30px rgba(0,0,0,.2)}
-summary{cursor:pointer}
-.shot{aspect-ratio:1206/2000;height:auto}
-.shot[src*="dashboard"],.shot[src*="budget"],.shot[src*="csv"],.shot[src*="reports"],.shot[src*="integrity"]{aspect-ratio:auto}
-/* phones: the seven links scroll sideways in one tidy row instead of wrapping on three lines */
-@media(max-width:720px){header .wrap{flex-wrap:wrap}nav{order:3;flex:1 0 100%;flex-wrap:nowrap;overflow-x:auto;gap:2px 16px;padding-bottom:2px;scrollbar-width:none}nav::-webkit-scrollbar{display:none}nav a{white-space:nowrap}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}.btn:not(.off):active,a.card:active{transform:none}}
-/* Night look (inspired by the calm, black, pill-button style of hardware-wallet apps): black canvas, 5 % white cards, white pill buttons,
-   mono uppercase eyebrow labels, tight headlines, blurred header. One look in light and dark system modes. */
-:root,:root{--accent:#968dff;--accent-soft:rgba(150,141,255,.14);--bg:#000;--fg:#fff;--muted:#a1a1a6;--card:rgba(255,255,255,.05);--line:rgba(255,255,255,.1)}
-html{color-scheme:dark}
-header{background:rgba(0,0,0,.6);backdrop-filter:blur(40px);-webkit-backdrop-filter:blur(40px);border-bottom:1px solid var(--line)}
-h1,h2,h3,.hero h1{font-weight:600;letter-spacing:-.035em}
-.hero h1{font-size:clamp(36px,7vw,64px);line-height:1.04}
-.btn:not(.soft):not(.off){background:#fff;color:#000;font-weight:500}
-.btn.soft{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.35)}
-.btn.off{background:rgba(255,255,255,.08);color:var(--muted)}
-.card,details{background:var(--card);border:1px solid rgba(255,255,255,.08);box-shadow:none}
-.tile,.chips span{background:rgba(255,255,255,.08);color:#fff}
-.badge,.hero .badge{background:rgba(255,255,255,.1);color:#fff;border-radius:4px;padding:4px 8px;font:500 12px/18px ui-monospace,"SF Mono",Menlo,monospace;letter-spacing:.04em;text-transform:uppercase}
-.hero{background:radial-gradient(120% 90% at 50% -10%,rgba(94,80,234,.45),rgba(0,0,0,0) 62%),#050507;border:1px solid rgba(255,255,255,.08);box-shadow:none;color:#fff}
-.hero .btn:not(.soft):not(.off){background:#fff;color:#000}
-.hero .btn.soft{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.35)}
-.stat b{color:#fff;letter-spacing:-.04em}
-@media(hover:hover) and (pointer:fine){.btn:not(.off):hover{box-shadow:0 6px 24px rgba(150,141,255,.3)}a.card:hover{box-shadow:none;border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.08)}}
-/* Ledger-like structure: left-aligned two-column hero, centred nav with a white language pill, stat strip, bigger left-aligned section titles */
-header nav{flex:1;justify-content:center}
-header nav a{font-size:14px;font-weight:500}
-header a.lang-switch{background:#fff;color:#000!important;border:0;border-radius:999px;padding:0 16px;font-weight:500;text-decoration:none}
-.hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);column-gap:48px;text-align:left;align-items:center;padding:56px 48px 0;margin-top:28px;border-radius:32px}
-.hero>*{grid-column:1}
-.hero>img,.hero>picture,.hero>.shot{grid-column:2;grid-row:1/9;align-self:end;margin:0;border-radius:20px 20px 0 0}
-.hero h1{margin:.2em 0 .3em;max-width:none;font-size:clamp(36px,5.2vw,64px)}
-.hero .lead{margin:0 0 18px;max-width:30em}
-.hero p{margin-left:0}
-.hero .badge{justify-self:start}
-@media(max-width:860px){.hero{grid-template-columns:1fr;padding:36px 22px 0}.hero>img,.hero>picture,.hero>.shot{grid-column:1;grid-row:auto;margin-top:26px}}
-.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));margin:22px 0 8px;border:1px solid var(--line);border-radius:20px;overflow:hidden}
-.strip .stat{text-align:left;padding:20px 24px;border-left:1px solid var(--line);color:var(--muted);font-size:15px}.strip .stat:first-child{border-left:0}
-.strip .stat b{font-size:clamp(26px,3.4vw,38px);line-height:1.1;margin-bottom:4px}
-section{padding:56px 0}
-section>h2{font-size:clamp(28px,4vw,44px);line-height:1.08;margin:0 0 6px}
-.card{border-radius:24px;padding:26px}
-.grid{gap:14px}
-summary{font-size:18px;font-weight:500}
-details{border-radius:20px;padding:6px 24px}
-/* bottom of the home page: the "built in the open" card, the closing call to action and the footer */
-section.build{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:6px 40px;align-items:center;padding:36px 40px;margin-top:56px;border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:28px}
-section.build>h2,section.build>p.muted{grid-column:1;margin:0}
-section.build>p:last-child{grid-column:2;grid-row:1/3;display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end;margin:0}
-section.build .btn{margin:0}
-@media(max-width:820px){section.build{grid-template-columns:1fr;padding:28px 24px}section.build>p:last-child{grid-column:1;grid-row:auto;justify-content:flex-start;margin-top:14px}}
-.cta{text-align:left;background:radial-gradient(90% 150% at 100% 100%,rgba(94,80,234,.5),rgba(0,0,0,0) 62%),#060608;border:1px solid var(--line);border-radius:32px;padding:56px 48px;margin:40px 0 20px}
-.cta h2{font-size:clamp(30px,4.6vw,54px);line-height:1.04;margin:0 0 18px;max-width:14em}
-.cta p{margin:0 0 10px}
-@media(max-width:640px){.cta{padding:36px 24px}}
-footer{margin-top:56px}
-.fcols b{font:500 12px/18px ui-monospace,"SF Mono",Menlo,monospace;letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px}
+a{color:var(--accent)}
+code{background:var(--accent-soft);padding:1px 6px;border-radius:6px;font-size:.9em}
+.muted{color:var(--muted)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;background:var(--surface);padding:8px 12px;border-radius:8px;z-index:30}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;gap:var(--s3);min-height:60px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:650;color:var(--fg);text-decoration:none;font-size:18px;letter-spacing:-.01em;margin-right:auto}
+.brand img{width:28px;height:28px;border-radius:7px}
+nav{display:flex;gap:2px}
+nav a{color:var(--muted);text-decoration:none;font-size:15px;padding:0 12px;min-height:44px;display:inline-flex;align-items:center;border-radius:999px}
+nav a:hover{color:var(--fg)}nav a[aria-current]{color:var(--fg);background:var(--accent-soft)}
+.lang-switch{border:1px solid var(--line);border-radius:999px;padding:0 14px;min-height:36px;display:inline-flex;align-items:center;color:var(--fg);text-decoration:none;font-size:14px}
+@media(max-width:760px){header .wrap{flex-wrap:wrap;padding-top:8px;padding-bottom:4px;row-gap:0}nav{order:3;flex:1 0 100%;overflow-x:auto;scrollbar-width:none}nav::-webkit-scrollbar{display:none}nav a{white-space:nowrap}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;background:var(--accent);color:var(--accent-fg);text-decoration:none;font-weight:600;font-size:16px;border:1px solid transparent;cursor:pointer;transition:transform .15s var(--ease),opacity .15s}
+.btn:active{transform:scale(.97)}
+.btn.ghost{background:transparent;color:var(--fg);border-color:var(--line)}
+.btn.off{background:var(--accent-soft);color:var(--muted);cursor:default}
+.btn.off:active{transform:none}
+.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+
+/* layout blocks */
+section{padding:var(--s6) 0}
+@media(max-width:640px){section{padding:var(--s5) 0}}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin:0 0 var(--s2)}
+.sec-head{max-width:40em;margin-bottom:var(--s4)}
+.sec-head h2{font-size:clamp(28px,4vw,42px)}
+.sec-head p{color:var(--muted);margin:var(--s2) 0 0;font-size:18px}
+.hero{padding:var(--s6) 0 var(--s4);text-align:center}
+.hero h1{font-size:clamp(38px,6.4vw,68px);max-width:15em;margin:0 auto var(--s3)}
+.hero .lead{font-size:clamp(18px,2.2vw,21px);color:var(--muted);max-width:34em;margin:0 auto var(--s4)}
+.hero .actions{justify-content:center}
+.hero .note{color:var(--muted);font-size:15px;margin:var(--s3) 0 0}
+.platforms{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:var(--s3)}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:4px 14px;font-size:14px;font-weight:550}
+.pill svg{width:16px;height:16px}
+@media(max-width:640px){.hero{padding-top:var(--s5)}}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-l);padding:var(--s4)}
+.card h3{font-size:19px;margin-bottom:6px}.card p{margin:0;color:var(--muted);font-size:16px}
+a.card{display:block;color:inherit;text-decoration:none;transition:border-color .15s,transform .15s var(--ease)}
+a.card:hover{border-color:var(--accent)}a.card:active{transform:scale(.99)}
+a.card .more{display:inline-block;margin-top:var(--s2);color:var(--accent);font-size:15px;font-weight:550}
+.grid{display:grid;gap:var(--s3);grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.grid.three{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.tile{width:44px;height:44px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:var(--s3)}
+.ico{width:24px;height:24px}
+
+/* feature groups */
+.fgroup{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:var(--s4);padding:var(--s4) 0;border-top:1px solid var(--line)}
+.fgroup:first-of-type{border-top:0}
+.fgroup h3{font-size:22px}.fgroup .sub{color:var(--muted);margin:6px 0 0;font-size:16px}
+.fgroup ul{list-style:none;margin:0;padding:0;display:grid;gap:var(--s3) var(--s4);grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.fgroup li{margin:0}.fgroup li b{display:block;font-weight:600}.fgroup li span{color:var(--muted);font-size:15.5px}
+.tag{display:inline-block;margin-left:6px;font-size:11px;font-weight:650;letter-spacing:.04em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);border-radius:6px;padding:1px 6px;vertical-align:2px}
+@media(max-width:820px){.fgroup{grid-template-columns:1fr}}
+
+/* platform comparison */
+.cols{display:grid;gap:var(--s3);grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.check{list-style:none;margin:var(--s3) 0 0;padding:0}
+.check li{position:relative;padding-left:28px;margin:8px 0;color:var(--muted);font-size:16px}
+.check li::before{content:"";position:absolute;left:0;top:.45em;width:16px;height:9px;border-left:2.5px solid var(--accent);border-bottom:2.5px solid var(--accent);transform:rotate(-45deg) scale(.8);transform-origin:center}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:var(--s5);align-items:center}
+@media(max-width:900px){.split{grid-template-columns:1fr}}
+
+/* faq, cta */
+details{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-m);padding:2px 20px;margin:10px 0}
+summary{cursor:pointer;font-weight:600;font-size:17px;min-height:48px;display:flex;align-items:center}
+details p{margin:0 0 16px;color:var(--muted)}
+.cta{text-align:center;background:var(--accent-soft);border-radius:32px;padding:var(--s5) var(--s3);margin:var(--s5) 0 0}
+.cta h2{font-size:clamp(28px,4.4vw,44px);margin-bottom:var(--s3)}.cta .actions{justify-content:center}.cta .note{color:var(--muted);margin-top:var(--s3);font-size:15px}
+
+/* text pages */
+.page{max-width:760px;margin:0 auto;padding:var(--s5) 20px}
+.page h1{font-size:clamp(30px,5vw,44px)}.page .lead{font-size:20px;color:var(--muted);margin:var(--s2) 0 var(--s3)}
+.page h2{font-size:24px;margin:1.7em 0 .3em}.page h3{font-size:18px;margin:1.2em 0 .2em}
+.page ul{padding-left:1.2em}li{margin:.25em 0}.crumb{font-size:15px}.crumb a{min-height:44px;display:inline-flex;align-items:center}
+.toc{display:flex;flex-wrap:wrap;gap:4px 16px;margin:14px 0;padding:0;list-style:none}.toc a{font-size:15px;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+.shot{display:block;max-width:100%;height:auto;border-radius:var(--r-m);border:1px solid var(--line);margin:var(--s4) auto}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:var(--s5) 0;color:var(--muted);font-size:15px}
+.fcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:var(--s4)}
+.fcols b{display:block;color:var(--fg);margin-bottom:6px;font-size:14px}
+.fcols a{display:flex;align-items:center;min-height:36px;color:var(--muted);text-decoration:none}.fcols a:hover{color:var(--accent)}
+.legal{margin-top:var(--s4);border-top:1px solid var(--line);padding-top:var(--s3)}
+.legal a{color:var(--muted)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 </style><script>(function(){try{var s=localStorage.plLang;var want=s||((navigator.language||'en').toLowerCase().indexOf('fr')==0?'fr':'en');if(want!=='en'){location.replace('../../features/');}}catch(e){}})();</script></head>
-<body><a class="skip" href="#main">Skip to content</a><header><div class="wrap"><a class="brand" href="../../en/"><img src="../../img/icon.png" alt="" width="30" height="30">Pocket Ledger</a><nav><a href="../../en/features/" aria-current=page>Features</a><a href="../../en/security/">Security</a><a href="../../en/help/">Help</a><a href="../../en/roadmap/">Roadmap</a><a href="../../en/changelog/">What's new</a><a href="../../en/support/">Support</a><a href="../../en/about/">About</a></nav><a class="lang-switch" href="../../features/" hreflang="fr" lang="fr" onclick="try{localStorage.plLang='fr'}catch(e){}">Français</a></div></header>
-<main id="main"><div class="page"><h1>Features</h1><p class="lead">Short deep-dives into what needs more room than the home page.</p><div class="grid"><a class="card" href="../../en/features/budgets/"><h3>Envelopes and budgets</h3><p>Know what is left, month by month.</p><span class="more">Learn more →</span></a><a class="card" href="../../en/features/imports/"><h3>Import and export</h3><p>Your statements, no third-party service.</p><span class="more">Learn more →</span></a><a class="card" href="../../en/features/reports/"><h3>Reports and financial health</h3><p>See where the money goes.</p><span class="more">Learn more →</span></a><a class="card" href="../../en/features/sharing/"><h3>Shared account</h3><p>A joint account, precise rights.</p><span class="more">Learn more →</span></a><a class="card" href="../../en/features/backups/"><h3>Backups and integrity</h3><p>Always able to go back.</p><span class="more">Learn more →</span></a></div></div></main>
-<footer><div class="wrap"><div class="fcols"><div><b>Pocket Ledger</b>Budget and accounts for Mac. Free, ad-free, your data stays with you.</div><div><b>Product</b><a href="../../en/features/">Features</a><a href="../../en/security/">Security</a><a href="../../en/roadmap/">Roadmap</a><a href="../../en/changelog/">What's new</a></div><div><b>Contact</b><a href="mailto:atxgrp@gmail.com">atxgrp@gmail.com</a><a href="../../en/support/">Support</a></div><div><b>Resources</b><a href="../../en/help/">Help</a><a href="../../en/accessibility/">Accessibility</a><a href="../../en/about/">About</a></div></div><div class="legal">© 2026 ATX Grp · <a href="../../en/privacy/">Privacy</a> · <a href="../../en/terms/">Terms</a> · <a href="../../en/legal/">Legal notice</a> · <a href="../../en/credits/">Credits</a><p>Pocket Ledger is independent: it is not affiliated with or endorsed by Apple. Mac and macOS are trademarks of Apple Inc.</p></div></div></footer></body></html>
+<body><a class="skip" href="#main">Skip to content</a><header><div class="wrap"><a class="brand" href="../../en/"><img src="../../img/icon.png" alt="" width="28" height="28">Pocket Ledger</a><nav aria-label="Pocket Ledger"><a href="../../en/mac/">Mac</a><a href="../../en/iphone/">iPhone and iPad</a><a href="../../en/features/" aria-current=page>Features</a><a href="../../en/security/">Security</a><a href="../../en/help/">Help</a></nav><a class="lang-switch" href="../../features/" hreflang="fr" lang="fr" onclick="try{localStorage.plLang='fr'}catch(e){}">Français</a></div></header>
+<main id="main"><div class="wrap"><div class="hero" style="text-align:left;padding-bottom:0"><h1 style="margin:0 0 12px">All features</h1><p class="lead" style="margin:0">Eight families, from the current account to the mortgage.</p></div><section style="padding-top:var(--s4)"><div class="fgroup" id="accounts"><div><div class="tile"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10l9-6 9 6"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8"/><path d="M3 20h18"/></svg></div><h3>Your accounts</h3><p class="sub">Everything you own, in one place.</p></div><ul><li><b>Every kind of account</b><span>Current, card, cash, savings, investments, currencies with ECB rates.</span></li><li><b>A bank per account</b><span>Picked from a list of banks, with a badge, and asked at import.</span></li><li><b>Transfers and splits</b><span>Between your accounts, or one expense shared across categories.</span></li><li><b>Clearing</b><span>Mark what is checked, or clear everything up to a date at once.</span></li><li><b>Tags and attachments</b><span>A receipt or a contract kept with the transaction.</span></li><li><b>Receipt reading <span class=tag>Mac</span></b><span>A scanned receipt is read on your Mac, nothing is sent.</span></li></ul></div><div class="fgroup" id="savings"><div><div class="tile"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v9h9"/></svg></div><h3>Savings and investments</h3><p class="sub">Savings books, life insurance, stocks: follow them like accounts.</p></div><ul><li><b>Savings products</b><span>French savings books, PEA, life insurance, brokerage: ceiling, rate, interest.</span></li><li><b>Portfolio value</b><span>Update today&#x27;s value: the difference becomes a gain or a loss.</span></li><li><b>Savings goals</b><span>An amount, a date, the progress.</span></li><li><b>Crypto</b><span>Lots, cost basis, market prices and alerts.</span></li></ul></div><div class="fgroup" id="budget"><div><div class="tile"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 0 1-14 5.3M4 12a8 8 0 0 1 14-5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg></div><h3>Budget and forecast</h3><p class="sub">Know what is left, and what is coming.</p></div><ul><li><b>Envelopes</b><span>One per category per month, with carry-over and pace alerts.</span></li><li><b>Forecast</b><span>Your balance month by month: due items, detected subscriptions, loans, an estimate of everyday spending.</span></li><li><b>Subscriptions</b><span>Detected in your history, with price rises.</span></li><li><b>Recurring items and reminders</b><span>Automatic due items and notifications with buttons.</span></li></ul></div><div class="fgroup" id="loans"><div><div class="tile"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/><path d="M10 20v-5h4v5"/></svg></div><h3>Loans</h3><p class="sub">A loan that matches your bank&#x27;s table.</p></div><ul><li><b>Full schedule</b><span>Interest, capital, insurance, balance due at each date.</span></li><li><b>The banks&#x27; method</b><span>Constant total instalment, insurance as a % of the remaining capital.</span></li><li><b>Early repayment</b><span>Shorten the term or lower the payment, compared side by side.</span></li><li><b>From a payment</b><span>The app spots a regular debit and offers to create the loan.</span></li></ul></div><div class="fgroup" id="import"><div><div class="tile"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v10"/><path d="M8 10l4 4 4-4"/><path d="M4 17v3h16v-3"/></svg></div><h3>Import</h3><p class="sub">Your statements, no third-party service.</p></div><ul><li><b>CSV assistant</b><span>It learns each bank&#x27;s layout and lets you fix row by row.</span></li><li><b>Other formats</b><span>OFX, QFX, QIF, MT940, CAMT.053, XHB and Actual Budget.</span></li><li><b>PayPal and Trade Republic</b><span>PayPal purchases matched with no double counting; Trade Republic exports read in full.</span></li><li><b>Duplicates and undo</b><span>Duplicates are flagged, an import is undone in one gesture.</span></li></ul></div><div class="fgroup" id="insight"><div><div class="tile"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20V10M12 20V4M19 20v-8"/><path d="M3 20h18"/></svg></div><h3>Understand</h3><p class="sub">What your data says.</p></div><ul><li><b>Data analysis</b><span>Internal transfers, duplicate categories, subscriptions, real balance of the last 12 months.</span></li><li><b>Reports</b><span>Monthly, trend, 50/30/20, financial health, PDF export.</span></li><li><b>Report builder <span class=tag>Mac</span></b><span>Compose your own: period, categories, grouping.</span></li><li><b>Payees</b><span>Names cleaned, merged or kept apart, sorted as you like.</span></li></ul></div><div class="fgroup" id="trust"><div><div class="tile"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div><h3>Protect and share</h3><p class="sub">Your data, under your control.</p></div><ul><li><b>Lock</b><span>Touch ID or Face ID, amounts hidden on screen.</span></li><li><b>Window hidden from captures <span class=tag>Mac</span></b><span>The app can hide itself from screenshots.</span></li><li><b>Verified backups</b><span>Preview before restoring, integrity check, journal, undo.</span></li><li><b>Shared account</b><span>One account, rights chosen per person, protected by signature.</span></li><li><b>Sync</b><span>iCloud, or an iCloud Drive, Dropbox or Syncthing folder.</span></li></ul></div><div class="fgroup" id="daily"><div><div class="tile"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg></div><h3>Every day</h3><p class="sub">Fewer taps for the same answers.</p></div><ul><li><b>Widgets</b><span>Net worth, budgets, &quot;Where the money goes&quot; on the Home Screen or Desktop.</span></li><li><b>Siri and Shortcuts</b><span>Add an expense by voice.</span></li><li><b>Menu bar quick add <span class=tag>Mac</span></b><span>An expense in a few keystrokes, without opening the window.</span></li><li><b>Seven languages</b><span>French, English, German, Spanish, Italian, Dutch, Portuguese.</span></li></ul></div></section><section><div class="sec-head"><h2>Go further</h2><p>Detailed pages on the features that need more room.</p></div><div class="grid"><a class="card" href="../../en/features/budgets/"><h3>Envelopes and budgets</h3><p>Know what is left, month by month.</p><span class="more">Learn more →</span></a><a class="card" href="../../en/features/imports/"><h3>Import and export</h3><p>Your statements, no third-party service.</p><span class="more">Learn more →</span></a><a class="card" href="../../en/features/reports/"><h3>Reports and financial health</h3><p>See where the money goes.</p><span class="more">Learn more →</span></a><a class="card" href="../../en/features/sharing/"><h3>Shared account</h3><p>A joint account, precise rights.</p><span class="more">Learn more →</span></a><a class="card" href="../../en/features/backups/"><h3>Backups and integrity</h3><p>Always able to go back.</p><span class="more">Learn more →</span></a></div></section></div></main>
+<footer><div class="wrap"><div class="fcols"><div><b>Pocket Ledger</b>Budget and accounts for Mac, iPhone and iPad. Free, ad-free, your data stays with you.</div><div><b>Product</b><a href="../../en/mac/">Mac</a><a href="../../en/iphone/">iPhone and iPad</a><a href="../../en/features/">Features</a><a href="../../en/security/">Security</a><a href="../../en/help/">Help</a><a href="../../en/changelog/">What&#x27;s new</a><a href="../../en/roadmap/">Roadmap</a></div><div><b>Resources</b><a href="../../en/help/">Help</a><a href="../../en/accessibility/">Accessibility</a><a href="../../en/support/">Support</a><a href="../../en/about/">About</a></div><div><b>Contact</b><a href="mailto:atxgrp@gmail.com">atxgrp@gmail.com</a></div></div><div class="legal">© 2026 ATX Grp · <a href="../../en/privacy/">Privacy</a> · <a href="../../en/terms/">Terms</a> · <a href="../../en/legal/">Legal notice</a> · <a href="../../en/credits/">Credits</a><p>Pocket Ledger is independent: it is not affiliated with or endorsed by Apple. Mac, iPhone, iPad and macOS are trademarks of Apple Inc.</p></div></div></footer></body></html>

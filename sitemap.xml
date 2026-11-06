@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://atxgrp.github.io/pocketledger-site/</loc></url>
+<url><loc>https://atxgrp.github.io/pocketledger-site/mac/</loc></url>
+<url><loc>https://atxgrp.github.io/pocketledger-site/iphone/</loc></url>
 <url><loc>https://atxgrp.github.io/pocketledger-site/features/</loc></url>
 <url><loc>https://atxgrp.github.io/pocketledger-site/features/budgets/</loc></url>
 <url><loc>https://atxgrp.github.io/pocketledger-site/features/imports/</loc></url>
@@ -19,6 +21,8 @@
 <url><loc>https://atxgrp.github.io/pocketledger-site/legal/</loc></url>
 <url><loc>https://atxgrp.github.io/pocketledger-site/credits/</loc></url>
 <url><loc>https://atxgrp.github.io/pocketledger-site/en/</loc></url>
+<url><loc>https://atxgrp.github.io/pocketledger-site/en/mac/</loc></url>
+<url><loc>https://atxgrp.github.io/pocketledger-site/en/iphone/</loc></url>
 <url><loc>https://atxgrp.github.io/pocketledger-site/en/features/</loc></url>
 <url><loc>https://atxgrp.github.io/pocketledger-site/en/features/budgets/</loc></url>
 <url><loc>https://atxgrp.github.io/pocketledger-site/en/features/imports/</loc></url>
