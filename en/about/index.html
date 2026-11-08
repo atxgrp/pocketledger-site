@@ -113,6 +113,26 @@ footer{border-top:1px solid var(--line);padding:var(--s5) 0;color:var(--muted);f
 .legal{margin-top:var(--s4);border-top:1px solid var(--line);padding-top:var(--s3)}
 .legal a{color:var(--muted)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+/* home hero: text left, the net worth card right */
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:var(--s5);align-items:center}
+.hero-card{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-l);padding:var(--s4) var(--s4) var(--s3)}
+.hc-label{color:var(--muted);font-size:15px}
+.hc-figure{font-size:clamp(34px,4.4vw,48px);font-weight:500;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.15;margin:var(--s1) 0}
+.hc-delta{color:var(--pos);font-size:15px;font-variant-numeric:tabular-nums;margin-bottom:var(--s3)}
+.hero-card svg{display:block;width:100%;height:140px;overflow:visible}
+.hc-area{fill:color-mix(in srgb,var(--accent) 14%,transparent)}
+.hc-line{fill:none;stroke:var(--accent);stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round;vector-effect:non-scaling-stroke}
+.hc-mark{stroke:#f0a52e;stroke-width:1;vector-effect:non-scaling-stroke;opacity:.7}
+.hc-dot{fill:#f0a52e}
+.hero-card figcaption{color:var(--muted);font-size:13px;margin-top:var(--s2)}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:var(--s4)}}
+
+/* three ideas: plain text columns under a hairline, no cards */
+.ideas{display:grid;gap:var(--s4);grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.idea{border-top:1px solid var(--line);padding-top:var(--s3)}
+.idea h3{font-size:21px;margin-bottom:var(--s2)}
+.idea p{margin:0;color:var(--muted)}
 </style><script>(function(){try{var s=localStorage.plLang;var want=s||((navigator.language||'en').toLowerCase().indexOf('fr')==0?'fr':'en');if(want!=='en'){location.replace('../../about/');}}catch(e){}})();</script></head>
 <body><a class="skip" href="#main">Skip to content</a><header><div class="wrap"><a class="brand" href="../../en/"><img src="../../img/icon.png" alt="" width="28" height="28">Pocket Ledger</a><nav aria-label="Pocket Ledger"><a href="../../en/mac/">Mac</a><a href="../../en/iphone/">iPhone and iPad</a><a href="../../en/features/">Features</a><a href="../../en/security/">Security</a><a href="../../en/help/">Help</a></nav><a class="lang-switch" href="../../about/" hreflang="fr" lang="fr" onclick="try{localStorage.plLang='fr'}catch(e){}">Français</a></div></header>
 <main id="main"><div class="page"><h1>About</h1><p class="lead">Free apps, published by ATX Grp.</p><p>Pocket Ledger is a free, ad-free budget and accounts app for Mac, iPhone and iPad, published by ATX Grp. It is inspired by the simplicity of classic money managers but written from scratch: its code, texts and data are our own.</p>
