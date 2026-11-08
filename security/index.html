@@ -241,27 +241,38 @@ footer{border-top:1px solid var(--line);padding:var(--s5) 0;color:var(--muted);f
 .hc-bar{height:8px;border-radius:4px;background:color-mix(in srgb,var(--fg) 10%,transparent);overflow:hidden}
 .hc-bar i{display:block;height:100%;background:var(--accent);border-radius:4px}
 .hc-num{font-variant-numeric:tabular-nums;text-align:right}
+
+/* reading pages */
+.page.solo{max-width:46em;margin:0;padding:var(--s5) 0}
+.page-grid{display:grid;grid-template-columns:minmax(0,46em) 15em;gap:var(--s6);align-items:start;padding-top:var(--s5);padding-bottom:var(--s5)}
+.page-grid .page{max-width:none;margin:0;padding:0}
+.page h1{font-weight:600}.page h2{scroll-margin-top:84px}
+.toc{position:sticky;top:88px;display:grid;gap:2px;font-size:14px;margin-top:var(--s2)}
+.toc b{color:var(--fg);font-weight:600;margin-bottom:var(--s1)}
+.toc a{color:var(--muted);text-decoration:none;padding:4px 0 4px 12px;border-left:1px solid var(--line)}
+.toc a:hover{color:var(--fg);border-left-color:var(--fg)}
+@media(max-width:960px){.page-grid{grid-template-columns:minmax(0,1fr)}.toc{display:none}}
 </style><script>(function(){try{var s=localStorage.plLang;var want=s||((navigator.language||'en').toLowerCase().indexOf('fr')==0?'fr':'en');if(want!=='fr'){location.replace('../en/security/');}}catch(e){}})();</script></head>
 <body><a class="skip" href="#main">Aller au contenu</a><header><div class="wrap"><a class="brand" href="../"><img src="../img/icon.png" alt="" width="28" height="28">Pocket Ledger</a><nav aria-label="Pocket Ledger"><a href="../mac/">Mac</a><a href="../iphone/">iPhone et iPad</a><a href="../features/">Fonctions</a><a href="../security/" aria-current=page>Sécurité</a><a href="../help/">Aide</a></nav><a class="lang-switch" href="../en/security/" hreflang="en" lang="en" onclick="try{localStorage.plLang='en'}catch(e){}">English</a></div></header>
-<main id="main"><div class="page"><h1>Sécurité et confidentialité</h1><p class="lead">Local d&#x27;abord : vos données restent chez vous.</p><p>Vos données financières sont personnelles. Pocket Ledger est construit pour qu&#x27;elles restent chez vous : rien n&#x27;est envoyé à l&#x27;éditeur, et chaque protection ci-dessous existe dans l&#x27;app.</p>
-<h2>Où sont vos données</h2>
+<main id="main"><div class="wrap page-grid"><div class="page"><h1>Sécurité et confidentialité</h1><p class="lead">Local d&#x27;abord : vos données restent chez vous.</p><p>Vos données financières sont personnelles. Pocket Ledger est construit pour qu&#x27;elles restent chez vous : rien n&#x27;est envoyé à l&#x27;éditeur, et chaque protection ci-dessous existe dans l&#x27;app.</p>
+<h2 id="ou-sont-vos-donnees">Où sont vos données</h2>
 <p>Un fichier lisible (<code>ledger.json</code>) et un dossier de pièces jointes sur votre Mac. Le fichier n&#x27;est lisible que par votre session macOS (droits 600). Un fichier plus récent que l&#x27;app n&#x27;est jamais écrasé.</p>
-<h2>Verrouillage de l&#x27;app</h2>
+<h2 id="verrouillage-de-l-x27-app">Verrouillage de l&#x27;app</h2>
 <p>Touch ID ou mot de passe du Mac, avec un délai au choix. Le bouton œil (⇧⌘H) masque tous les montants, et vous pouvez les masquer au lancement ou quand l&#x27;app passe en arrière-plan. Une option cache la fenêtre des partages d&#x27;écran et des captures.</p>
-<h2>Clés et secrets</h2>
+<h2 id="cles-et-secrets">Clés et secrets</h2>
 <p>Les clés d&#x27;accès aux banques et vos clés de signature de comptes partagés sont gardées dans le Trousseau de votre Mac, réservées à cet appareil, jamais dans le fichier de données.</p>
-<h2>Sauvegardes vérifiées</h2>
+<h2 id="sauvegardes-verifiees">Sauvegardes vérifiées</h2>
 <p>Une copie automatique par jour (14 jours, puis une par mois), relue après écriture et refusée si elle ne correspond pas. Chaque sauvegarde porte une empreinte SHA-256 : une copie modifiée ou abîmée est refusée à la restauration, et un aperçu s&#x27;affiche avant de restaurer. Les copies restent sur votre Mac ; la copie iCloud reste dans votre compte Apple, hors de portée d&#x27;ATX Grp.</p>
-<h2>Contrôle d&#x27;intégrité</h2>
+<h2 id="controle-d-x27-integrite">Contrôle d&#x27;intégrité</h2>
 <p>Gérer → Contrôle d&#x27;intégrité cherche ce qui est abîmé (doublons, catégories disparues, virements orphelins…) et le répare sans rien perdre ; une réparation s&#x27;annule. Un journal des modifications, gardé sur ce Mac, permet d&#x27;annuler une modification précise.</p>
-<h2>Comptes partagés</h2>
+<h2 id="comptes-partages">Comptes partagés</h2>
 <p>Les droits de chaque personne (lecture, saisie, tout modifier) sont protégés par des signatures P-256 : un fichier modifié par quelqu&#x27;un qui n&#x27;en a pas le droit est refusé.</p>
-<h2>Réseau</h2>
+<h2 id="reseau">Réseau</h2>
 <p>L&#x27;app ne se connecte qu&#x27;à ce que vous activez : taux de change de la BCE, prix des cryptomonnaies, connexion bancaire avec vos propres clés, recherche de mises à jour. Les mises à jour sont signées (Sparkle, signature Ed25519) et désactivées tant que vous ne les activez pas. Aucun pistage, aucun SDK publicitaire.</p>
-<h2>Application signée et notariée</h2>
+<h2 id="application-signee-et-notariee">Application signée et notariée</h2>
 <p>L&#x27;app est signée avec un Developer ID, notariée par Apple et utilise le Hardened Runtime. Les accroches de test sont absentes de la version livrée.</p>
-<h2>Effacer vos données</h2>
+<h2 id="effacer-vos-donnees">Effacer vos données</h2>
 <p>Réglages → Vos données → Effacer toutes mes données supprime le fichier, les pièces jointes, les sauvegardes et le journal de ce Mac.</p>
-<h2>Signaler une vulnérabilité</h2>
-<p>Écrivez à <a href="mailto:atxgrp@gmail.com">atxgrp@gmail.com</a> en décrivant le problème et comment le reproduire. Merci de nous laisser un délai raisonnable avant toute divulgation publique. Voir aussi /.well-known/security.txt.</p></div></main>
+<h2 id="signaler-une-vulnerabilite">Signaler une vulnérabilité</h2>
+<p>Écrivez à <a href="mailto:atxgrp@gmail.com">atxgrp@gmail.com</a> en décrivant le problème et comment le reproduire. Merci de nous laisser un délai raisonnable avant toute divulgation publique. Voir aussi /.well-known/security.txt.</p></div><div class="toc" role="navigation" aria-label="Sur cette page"><b>Sur cette page</b><a href="#ou-sont-vos-donnees">Où sont vos données</a><a href="#verrouillage-de-l-x27-app">Verrouillage de l&#x27;app</a><a href="#cles-et-secrets">Clés et secrets</a><a href="#sauvegardes-verifiees">Sauvegardes vérifiées</a><a href="#controle-d-x27-integrite">Contrôle d&#x27;intégrité</a><a href="#comptes-partages">Comptes partagés</a><a href="#reseau">Réseau</a><a href="#application-signee-et-notariee">Application signée et notariée</a><a href="#effacer-vos-donnees">Effacer vos données</a><a href="#signaler-une-vulnerabilite">Signaler une vulnérabilité</a></div></div></main>
 <footer><div class="wrap"><div class="fcols"><div><b>Pocket Ledger</b>Budget et comptes pour Mac, iPhone et iPad. Gratuit, sans publicité, vos données restent chez vous.</div><div><b>Produit</b><a href="../mac/">Mac</a><a href="../iphone/">iPhone et iPad</a><a href="../features/">Fonctions</a><a href="../security/">Sécurité</a></div><div><b>Ressources</b><a href="../help/">Aide</a><a href="../changelog/">Nouveautés</a><a href="../roadmap/">Feuille de route</a><a href="../accessibility/">Accessibilité</a><a href="../support/">Support</a><a href="../about/">À propos</a></div><div><b>Contact</b><a href="mailto:atxgrp@gmail.com">atxgrp@gmail.com</a></div></div><div class="legal">© 2026 ATX Grp · <a href="../privacy/">Confidentialité</a> · <a href="../terms/">Conditions</a> · <a href="../legal/">Mentions légales</a> · <a href="../credits/">Crédits</a><p>Pocket Ledger est indépendant : il n&#x27;est ni affilié à Apple ni approuvé par Apple. Mac, iPhone, iPad et macOS sont des marques d&#x27;Apple Inc.</p></div></div></footer></body></html>

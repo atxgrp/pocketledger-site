@@ -241,16 +241,27 @@ footer{border-top:1px solid var(--line);padding:var(--s5) 0;color:var(--muted);f
 .hc-bar{height:8px;border-radius:4px;background:color-mix(in srgb,var(--fg) 10%,transparent);overflow:hidden}
 .hc-bar i{display:block;height:100%;background:var(--accent);border-radius:4px}
 .hc-num{font-variant-numeric:tabular-nums;text-align:right}
+
+/* reading pages */
+.page.solo{max-width:46em;margin:0;padding:var(--s5) 0}
+.page-grid{display:grid;grid-template-columns:minmax(0,46em) 15em;gap:var(--s6);align-items:start;padding-top:var(--s5);padding-bottom:var(--s5)}
+.page-grid .page{max-width:none;margin:0;padding:0}
+.page h1{font-weight:600}.page h2{scroll-margin-top:84px}
+.toc{position:sticky;top:88px;display:grid;gap:2px;font-size:14px;margin-top:var(--s2)}
+.toc b{color:var(--fg);font-weight:600;margin-bottom:var(--s1)}
+.toc a{color:var(--muted);text-decoration:none;padding:4px 0 4px 12px;border-left:1px solid var(--line)}
+.toc a:hover{color:var(--fg);border-left-color:var(--fg)}
+@media(max-width:960px){.page-grid{grid-template-columns:minmax(0,1fr)}.toc{display:none}}
 </style><script>(function(){try{var s=localStorage.plLang;var want=s||((navigator.language||'en').toLowerCase().indexOf('fr')==0?'fr':'en');if(want!=='fr'){location.replace('../en/credits/');}}catch(e){}})();</script></head>
 <body><a class="skip" href="#main">Aller au contenu</a><header><div class="wrap"><a class="brand" href="../"><img src="../img/icon.png" alt="" width="28" height="28">Pocket Ledger</a><nav aria-label="Pocket Ledger"><a href="../mac/">Mac</a><a href="../iphone/">iPhone et iPad</a><a href="../features/">Fonctions</a><a href="../security/">Sécurité</a><a href="../help/">Aide</a></nav><a class="lang-switch" href="../en/credits/" hreflang="en" lang="en" onclick="try{localStorage.plLang='en'}catch(e){}">English</a></div></header>
-<main id="main"><div class="page"><h1>Sources et crédits</h1><h2>Sources de données</h2>
+<main id="main"><div class="wrap page-grid"><div class="page"><h1>Sources et crédits</h1><h2 id="sources-de-donnees">Sources de données</h2>
 <ul><li>Taux de change : taux de référence de la Banque centrale européenne, publiés sur <a href="https://www.ecb.europa.eu/stats/eurofxref/">https://www.ecb.europa.eu/stats/eurofxref/</a> (fichier eurofxref-daily.xml). Source : BCE.</li><li>Cours des cryptomonnaies : données fournies par CoinGecko (<a href="https://www.coingecko.com">https://www.coingecko.com</a>), via son API publique.</li><li>Connexions bancaires (facultatives) : GoCardless Bank Account Data (<a href="https://bankaccountdata.gocardless.com">https://bankaccountdata.gocardless.com</a>) et Enable Banking (<a href="https://enablebanking.com">https://enablebanking.com</a>), avec vos propres clés d&#x27;accès. Leurs conditions s&#x27;appliquent.</li><li>Empreinte carbone : les facteurs par catégorie sont des ordres de grandeur définis par l&#x27;éditeur, modifiables par vous ; ils ne proviennent pas d&#x27;une base officielle et ne remplacent pas un bilan carbone.</li><li>Catégories par défaut, modèles de rapports et textes : œuvres d&#x27;ATX Grp.</li></ul>
-<h2>Formats et normes pris en charge</h2>
+<h2 id="formats-et-normes-pris-en-charge">Formats et normes pris en charge</h2>
 <p>CSV, OFX/QFX, QIF, MT940, CAMT.053 (ISO 20022), fichiers d&#x27;export HomeBank (.xhb, .hbk) et base Actual Budget, en lecture seule, selon leurs spécifications publiques. Aucune donnée ni aucun code de ces projets n&#x27;est inclus.</p>
-<h2>Cryptographie</h2>
+<h2 id="cryptographie">Cryptographie</h2>
 <p>SHA-256, PBKDF2-HMAC-SHA256 (RFC 8018), AES-256-GCM et signatures ECDSA P-256 (FIPS 186-4), fournis par CryptoKit et CommonCrypto d&#x27;Apple ; les signatures de mises à jour (EdDSA) sont vérifiées par Sparkle.</p>
-<h2>Composants</h2>
+<h2 id="composants">Composants</h2>
 <p>La version diffusée embarque une seule bibliothèque tierce : Sparkle (<a href="https://sparkle-project.org">https://sparkle-project.org</a>), qui vérifie et installe les mises à jour, sous licence MIT, avec les licences de ses composants (texte complet : <a href="https://github.com/sparkle-project/Sparkle/blob/2.x/LICENSE">https://github.com/sparkle-project/Sparkle/blob/2.x/LICENSE</a>). Aucun autre code open source n&#x27;est inclus. L&#x27;app utilise les cadres d&#x27;Apple fournis avec macOS : SwiftUI, Swift Charts, CryptoKit, CloudKit, WidgetKit, App Intents, Vision, PDFKit, EventKit, LocalAuthentication, Security, Foundation et SQLite (lecture des fichiers Actual Budget). Les pictogrammes sont des SF Symbols d&#x27;Apple, utilisés conformément à leur licence. L&#x27;icône et la charte graphique sont des créations d&#x27;ATX Grp.</p>
-<h2>Remerciements</h2>
-<p>Merci aux projets de finances personnelles qui ont inspiré les usages (HomeBank, Actual Budget…) : Pocket Ledger est une création indépendante qui n&#x27;en reprend ni le code, ni les textes, ni les données.</p></div></main>
+<h2 id="remerciements">Remerciements</h2>
+<p>Merci aux projets de finances personnelles qui ont inspiré les usages (HomeBank, Actual Budget…) : Pocket Ledger est une création indépendante qui n&#x27;en reprend ni le code, ni les textes, ni les données.</p></div><div class="toc" role="navigation" aria-label="Sur cette page"><b>Sur cette page</b><a href="#sources-de-donnees">Sources de données</a><a href="#formats-et-normes-pris-en-charge">Formats et normes pris en charge</a><a href="#cryptographie">Cryptographie</a><a href="#composants">Composants</a><a href="#remerciements">Remerciements</a></div></div></main>
 <footer><div class="wrap"><div class="fcols"><div><b>Pocket Ledger</b>Budget et comptes pour Mac, iPhone et iPad. Gratuit, sans publicité, vos données restent chez vous.</div><div><b>Produit</b><a href="../mac/">Mac</a><a href="../iphone/">iPhone et iPad</a><a href="../features/">Fonctions</a><a href="../security/">Sécurité</a></div><div><b>Ressources</b><a href="../help/">Aide</a><a href="../changelog/">Nouveautés</a><a href="../roadmap/">Feuille de route</a><a href="../accessibility/">Accessibilité</a><a href="../support/">Support</a><a href="../about/">À propos</a></div><div><b>Contact</b><a href="mailto:atxgrp@gmail.com">atxgrp@gmail.com</a></div></div><div class="legal">© 2026 ATX Grp · <a href="../privacy/">Confidentialité</a> · <a href="../terms/">Conditions</a> · <a href="../legal/">Mentions légales</a> · <a href="../credits/">Crédits</a><p>Pocket Ledger est indépendant : il n&#x27;est ni affilié à Apple ni approuvé par Apple. Mac, iPhone, iPad et macOS sont des marques d&#x27;Apple Inc.</p></div></div></footer></body></html>

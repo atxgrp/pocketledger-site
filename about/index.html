@@ -241,20 +241,31 @@ footer{border-top:1px solid var(--line);padding:var(--s5) 0;color:var(--muted);f
 .hc-bar{height:8px;border-radius:4px;background:color-mix(in srgb,var(--fg) 10%,transparent);overflow:hidden}
 .hc-bar i{display:block;height:100%;background:var(--accent);border-radius:4px}
 .hc-num{font-variant-numeric:tabular-nums;text-align:right}
+
+/* reading pages */
+.page.solo{max-width:46em;margin:0;padding:var(--s5) 0}
+.page-grid{display:grid;grid-template-columns:minmax(0,46em) 15em;gap:var(--s6);align-items:start;padding-top:var(--s5);padding-bottom:var(--s5)}
+.page-grid .page{max-width:none;margin:0;padding:0}
+.page h1{font-weight:600}.page h2{scroll-margin-top:84px}
+.toc{position:sticky;top:88px;display:grid;gap:2px;font-size:14px;margin-top:var(--s2)}
+.toc b{color:var(--fg);font-weight:600;margin-bottom:var(--s1)}
+.toc a{color:var(--muted);text-decoration:none;padding:4px 0 4px 12px;border-left:1px solid var(--line)}
+.toc a:hover{color:var(--fg);border-left-color:var(--fg)}
+@media(max-width:960px){.page-grid{grid-template-columns:minmax(0,1fr)}.toc{display:none}}
 </style><script>(function(){try{var s=localStorage.plLang;var want=s||((navigator.language||'en').toLowerCase().indexOf('fr')==0?'fr':'en');if(want!=='fr'){location.replace('../en/about/');}}catch(e){}})();</script></head>
 <body><a class="skip" href="#main">Aller au contenu</a><header><div class="wrap"><a class="brand" href="../"><img src="../img/icon.png" alt="" width="28" height="28">Pocket Ledger</a><nav aria-label="Pocket Ledger"><a href="../mac/">Mac</a><a href="../iphone/">iPhone et iPad</a><a href="../features/">Fonctions</a><a href="../security/">Sécurité</a><a href="../help/">Aide</a></nav><a class="lang-switch" href="../en/about/" hreflang="en" lang="en" onclick="try{localStorage.plLang='en'}catch(e){}">English</a></div></header>
-<main id="main"><div class="page"><h1>À propos</h1><p class="lead">Des applications gratuites, éditées par ATX Grp.</p><p>Pocket Ledger est une application de budget et de comptes pour Mac, iPhone et iPad, gratuite et sans publicité, éditée par ATX Grp. Elle est inspirée par la simplicité des gestionnaires de comptes classiques, mais écrite de zéro : son code, ses textes et ses données sont les nôtres.</p>
-<h2>Nos principes</h2>
+<main id="main"><div class="wrap page-grid"><div class="page"><h1>À propos</h1><p class="lead">Des applications gratuites, éditées par ATX Grp.</p><p>Pocket Ledger est une application de budget et de comptes pour Mac, iPhone et iPad, gratuite et sans publicité, éditée par ATX Grp. Elle est inspirée par la simplicité des gestionnaires de comptes classiques, mais écrite de zéro : son code, ses textes et ses données sont les nôtres.</p>
+<h2 id="nos-principes">Nos principes</h2>
 <h3>La confidentialité d&#x27;abord</h3>
 <p>Vos données restent sur votre appareil. Pas de compte à créer, pas de serveur de l&#x27;éditeur, pas de pistage.</p>
 <h3>De vraies apps Apple</h3>
 <p>Écrites en SwiftUI pour Mac, iPhone et iPad, avec les widgets, Siri et Raccourcis, les notifications et le Trousseau.</p>
 <h3>Un travail vérifié</h3>
 <p>Plus de cent quarante tests automatiques du noyau de calcul, un contrôle de qualité avant chaque version (textes, identité, tests, build, données extrêmes sur tous les écrans, stabilité) et sept langues : français, anglais, allemand, espagnol, italien, néerlandais, portugais (Brésil).</p>
-<h2>Gratuit</h2>
+<h2 id="gratuit">Gratuit</h2>
 <p>Pocket Ledger n&#x27;a pas de palier payant, pas de publicité et ne vend aucune donnée.</p>
-<h2>Un éditeur indépendant</h2>
+<h2 id="un-editeur-independant">Un éditeur indépendant</h2>
 <p>ATX Grp est un éditeur indépendant, sans investisseur ni monétisation de vos données. Contact : <a href="mailto:atxgrp@gmail.com.">atxgrp@gmail.com.</a></p>
-<h2>Mentions légales</h2>
-<p>Les mentions légales, la politique de confidentialité, les conditions d&#x27;utilisation et les sources sont publiées sur ce site.</p></div></main>
+<h2 id="mentions-legales">Mentions légales</h2>
+<p>Les mentions légales, la politique de confidentialité, les conditions d&#x27;utilisation et les sources sont publiées sur ce site.</p></div><div class="toc" role="navigation" aria-label="Sur cette page"><b>Sur cette page</b><a href="#nos-principes">Nos principes</a><a href="#gratuit">Gratuit</a><a href="#un-editeur-independant">Un éditeur indépendant</a><a href="#mentions-legales">Mentions légales</a></div></div></main>
 <footer><div class="wrap"><div class="fcols"><div><b>Pocket Ledger</b>Budget et comptes pour Mac, iPhone et iPad. Gratuit, sans publicité, vos données restent chez vous.</div><div><b>Produit</b><a href="../mac/">Mac</a><a href="../iphone/">iPhone et iPad</a><a href="../features/">Fonctions</a><a href="../security/">Sécurité</a></div><div><b>Ressources</b><a href="../help/">Aide</a><a href="../changelog/">Nouveautés</a><a href="../roadmap/">Feuille de route</a><a href="../accessibility/">Accessibilité</a><a href="../support/">Support</a><a href="../about/">À propos</a></div><div><b>Contact</b><a href="mailto:atxgrp@gmail.com">atxgrp@gmail.com</a></div></div><div class="legal">© 2026 ATX Grp · <a href="../privacy/">Confidentialité</a> · <a href="../terms/">Conditions</a> · <a href="../legal/">Mentions légales</a> · <a href="../credits/">Crédits</a><p>Pocket Ledger est indépendant : il n&#x27;est ni affilié à Apple ni approuvé par Apple. Mac, iPhone, iPad et macOS sont des marques d&#x27;Apple Inc.</p></div></div></footer></body></html>

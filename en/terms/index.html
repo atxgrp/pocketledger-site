@@ -241,21 +241,32 @@ footer{border-top:1px solid var(--line);padding:var(--s5) 0;color:var(--muted);f
 .hc-bar{height:8px;border-radius:4px;background:color-mix(in srgb,var(--fg) 10%,transparent);overflow:hidden}
 .hc-bar i{display:block;height:100%;background:var(--accent);border-radius:4px}
 .hc-num{font-variant-numeric:tabular-nums;text-align:right}
+
+/* reading pages */
+.page.solo{max-width:46em;margin:0;padding:var(--s5) 0}
+.page-grid{display:grid;grid-template-columns:minmax(0,46em) 15em;gap:var(--s6);align-items:start;padding-top:var(--s5);padding-bottom:var(--s5)}
+.page-grid .page{max-width:none;margin:0;padding:0}
+.page h1{font-weight:600}.page h2{scroll-margin-top:84px}
+.toc{position:sticky;top:88px;display:grid;gap:2px;font-size:14px;margin-top:var(--s2)}
+.toc b{color:var(--fg);font-weight:600;margin-bottom:var(--s1)}
+.toc a{color:var(--muted);text-decoration:none;padding:4px 0 4px 12px;border-left:1px solid var(--line)}
+.toc a:hover{color:var(--fg);border-left-color:var(--fg)}
+@media(max-width:960px){.page-grid{grid-template-columns:minmax(0,1fr)}.toc{display:none}}
 </style><script>(function(){try{var s=localStorage.plLang;var want=s||((navigator.language||'en').toLowerCase().indexOf('fr')==0?'fr':'en');if(want!=='en'){location.replace('../../terms/');}}catch(e){}})();</script></head>
 <body><a class="skip" href="#main">Skip to content</a><header><div class="wrap"><a class="brand" href="../../en/"><img src="../../img/icon.png" alt="" width="28" height="28">Pocket Ledger</a><nav aria-label="Pocket Ledger"><a href="../../en/mac/">Mac</a><a href="../../en/iphone/">iPhone and iPad</a><a href="../../en/features/">Features</a><a href="../../en/security/">Security</a><a href="../../en/help/">Help</a></nav><a class="lang-switch" href="../../terms/" hreflang="fr" lang="fr" onclick="try{localStorage.plLang='fr'}catch(e){}">Français</a></div></header>
-<main id="main"><div class="page"><h1>Terms of use</h1><p>Last updated: 30 October 2026. Publisher: ATX Grp — <a href="mailto:atxgrp@gmail.com">atxgrp@gmail.com</a></p>
-<h2>Licence</h2>
+<main id="main"><div class="wrap page-grid"><div class="page"><h1>Terms of use</h1><p>Last updated: 30 October 2026. Publisher: ATX Grp — <a href="mailto:atxgrp@gmail.com">atxgrp@gmail.com</a></p>
+<h2 id="licence">Licence</h2>
 <p>Pocket Ledger is provided free of charge by ATX Grp. You may install and use it on your Macs to manage your personal or family finances. The software, its code, name, icon and visual identity remain the property of ATX Grp; you may not resell them or present them as your own.</p>
-<h2>What the app does, and does not do</h2>
+<h2 id="what-the-app-does-and-does-not-do">What the app does, and does not do</h2>
 <ul><li>Pocket Ledger is a tracking and calculation tool. It gives no financial, tax, accounting or investment advice.</li><li>Reports, projections, simulations, scores, carbon-footprint estimates and valuations are indicative. They rely on what you enter and on assumptions you can change.</li><li>The app is not a bank or a payment institution: it never moves money.</li></ul>
-<h2>Your responsibilities</h2>
+<h2 id="your-responsibilities">Your responsibilities</h2>
 <ul><li>Check your entries and imports before making a decision.</li><li>Back up regularly (File → Back up data…). A lost backup password cannot be recovered.</li><li>Protect your Mac and your keys. In a shared account, only give access to people you trust.</li><li>Respect the terms of the third-party services you use (your bank, GoCardless, Enable Banking, iCloud, Dropbox…).</li></ul>
-<h2>Warranty and liability</h2>
+<h2 id="warranty-and-liability">Warranty and liability</h2>
 <p>The software is provided &quot;as is&quot;, without warranty of any kind as to accuracy, availability or fitness for a particular purpose. To the extent permitted by law, ATX Grp is not liable for data loss, calculation errors, decisions made from the app or indirect damages. These limits do not apply to what the law forbids excluding and do not remove any mandatory rights you have as a consumer.</p>
-<h2>Third-party services</h2>
+<h2 id="third-party-services">Third-party services</h2>
 <p>Exchange rates (European Central Bank), cryptocurrency prices (CoinGecko) and bank connections (GoCardless, Enable Banking) come from independent third parties under their own terms and may change or stop without the app being responsible.</p>
-<h2>Updates</h2>
+<h2 id="updates">Updates</h2>
 <p>The app may evolve. Features that are free today stay free: nothing is locked behind a subscription.</p>
-<h2>Governing law</h2>
-<p>French law applies, subject to the mandatory rules of the country where you live. Contact: <a href="mailto:atxgrp@gmail.com.">atxgrp@gmail.com.</a></p></div></main>
+<h2 id="governing-law">Governing law</h2>
+<p>French law applies, subject to the mandatory rules of the country where you live. Contact: <a href="mailto:atxgrp@gmail.com.">atxgrp@gmail.com.</a></p></div><div class="toc" role="navigation" aria-label="On this page"><b>On this page</b><a href="#licence">Licence</a><a href="#what-the-app-does-and-does-not-do">What the app does, and does not do</a><a href="#your-responsibilities">Your responsibilities</a><a href="#warranty-and-liability">Warranty and liability</a><a href="#third-party-services">Third-party services</a><a href="#updates">Updates</a><a href="#governing-law">Governing law</a></div></div></main>
 <footer><div class="wrap"><div class="fcols"><div><b>Pocket Ledger</b>Budget and accounts for Mac, iPhone and iPad. Free, ad-free, your data stays with you.</div><div><b>Product</b><a href="../../en/mac/">Mac</a><a href="../../en/iphone/">iPhone and iPad</a><a href="../../en/features/">Features</a><a href="../../en/security/">Security</a></div><div><b>Resources</b><a href="../../en/help/">Help</a><a href="../../en/changelog/">What&#x27;s new</a><a href="../../en/roadmap/">Roadmap</a><a href="../../en/accessibility/">Accessibility</a><a href="../../en/support/">Support</a><a href="../../en/about/">About</a></div><div><b>Contact</b><a href="mailto:atxgrp@gmail.com">atxgrp@gmail.com</a></div></div><div class="legal">© 2026 ATX Grp · <a href="../../en/privacy/">Privacy</a> · <a href="../../en/terms/">Terms</a> · <a href="../../en/legal/">Legal notice</a> · <a href="../../en/credits/">Credits</a><p>Pocket Ledger is independent: it is not affiliated with or endorsed by Apple. Mac, iPhone, iPad and macOS are trademarks of Apple Inc.</p></div></div></footer></body></html>

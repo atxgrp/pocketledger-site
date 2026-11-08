@@ -241,10 +241,21 @@ footer{border-top:1px solid var(--line);padding:var(--s5) 0;color:var(--muted);f
 .hc-bar{height:8px;border-radius:4px;background:color-mix(in srgb,var(--fg) 10%,transparent);overflow:hidden}
 .hc-bar i{display:block;height:100%;background:var(--accent);border-radius:4px}
 .hc-num{font-variant-numeric:tabular-nums;text-align:right}
+
+/* reading pages */
+.page.solo{max-width:46em;margin:0;padding:var(--s5) 0}
+.page-grid{display:grid;grid-template-columns:minmax(0,46em) 15em;gap:var(--s6);align-items:start;padding-top:var(--s5);padding-bottom:var(--s5)}
+.page-grid .page{max-width:none;margin:0;padding:0}
+.page h1{font-weight:600}.page h2{scroll-margin-top:84px}
+.toc{position:sticky;top:88px;display:grid;gap:2px;font-size:14px;margin-top:var(--s2)}
+.toc b{color:var(--fg);font-weight:600;margin-bottom:var(--s1)}
+.toc a{color:var(--muted);text-decoration:none;padding:4px 0 4px 12px;border-left:1px solid var(--line)}
+.toc a:hover{color:var(--fg);border-left-color:var(--fg)}
+@media(max-width:960px){.page-grid{grid-template-columns:minmax(0,1fr)}.toc{display:none}}
 </style><script>(function(){try{var s=localStorage.plLang;var want=s||((navigator.language||'en').toLowerCase().indexOf('fr')==0?'fr':'en');if(want!=='fr'){location.replace('../en/accessibility/');}}catch(e){}})();</script></head>
 <body><a class="skip" href="#main">Aller au contenu</a><header><div class="wrap"><a class="brand" href="../"><img src="../img/icon.png" alt="" width="28" height="28">Pocket Ledger</a><nav aria-label="Pocket Ledger"><a href="../mac/">Mac</a><a href="../iphone/">iPhone et iPad</a><a href="../features/">Fonctions</a><a href="../security/">Sécurité</a><a href="../help/">Aide</a></nav><a class="lang-switch" href="../en/accessibility/" hreflang="en" lang="en" onclick="try{localStorage.plLang='en'}catch(e){}">English</a></div></header>
-<main id="main"><div class="page"><h1>Accessibilité</h1><p class="lead">Où nous en sommes, honnêtement.</p><p>Nous voulons que Pocket Ledger soit utilisable par le plus grand nombre. Cette page dit honnêtement où nous en sommes.</p>
-<h2>Ce que l&#x27;app propose</h2>
+<main id="main"><div class="wrap page-grid"><div class="page"><h1>Accessibilité</h1><p class="lead">Où nous en sommes, honnêtement.</p><p>Nous voulons que Pocket Ledger soit utilisable par le plus grand nombre. Cette page dit honnêtement où nous en sommes.</p>
+<h2 id="ce-que-l-x27-app-propose">Ce que l&#x27;app propose</h2>
 <h3>Taille du texte</h3>
 <p>Réglages → Affichage → Taille du texte agrandit les chiffres clés et le texte courant. Les écrans sont testés à une taille agrandie.</p>
 <h3>Contrastes</h3>
@@ -255,10 +266,10 @@ footer{border-top:1px solid var(--line);padding:var(--s5) 0;color:var(--muted);f
 <p>L&#x27;app s&#x27;appuie sur les composants standard de macOS, qui prennent en charge VoiceOver, et sur les réglages d&#x27;accessibilité du système. Les boutons-icônes portent une étiquette.</p>
 <h3>Confidentialité à l&#x27;écran</h3>
 <p>Masquer les montants (⇧⌘H) aide aussi à utiliser l&#x27;app en public.</p>
-<h2>État</h2>
+<h2 id="etat">État</h2>
 <p>L&#x27;accessibilité de l&#x27;app n&#x27;a pas fait l&#x27;objet d&#x27;un audit externe : c&#x27;est une auto-évaluation. Nous la considérons comme partielle, et nous ne revendiquons pas de conformité à une norme précise.</p>
-<h2>Limites connues</h2>
+<h2 id="limites-connues">Limites connues</h2>
 <ul><li>Certains graphiques sont d&#x27;abord visuels ; leurs chiffres sont aussi disponibles en tableau ou en export.</li><li>Les PDF exportés dépendent du contenu que vous saisissez.</li><li>Nous n&#x27;avons pas testé toutes les combinaisons de VoiceOver avec tous les écrans.</li></ul>
-<h2>Nous écrire</h2>
-<p>Une difficulté d&#x27;accès ? Écrivez à <a href="mailto:atxgrp@gmail.com">atxgrp@gmail.com</a> en décrivant ce qui bloque : nous la traitons en priorité.</p></div></main>
+<h2 id="nous-ecrire">Nous écrire</h2>
+<p>Une difficulté d&#x27;accès ? Écrivez à <a href="mailto:atxgrp@gmail.com">atxgrp@gmail.com</a> en décrivant ce qui bloque : nous la traitons en priorité.</p></div><div class="toc" role="navigation" aria-label="Sur cette page"><b>Sur cette page</b><a href="#ce-que-l-x27-app-propose">Ce que l&#x27;app propose</a><a href="#etat">État</a><a href="#limites-connues">Limites connues</a><a href="#nous-ecrire">Nous écrire</a></div></div></main>
 <footer><div class="wrap"><div class="fcols"><div><b>Pocket Ledger</b>Budget et comptes pour Mac, iPhone et iPad. Gratuit, sans publicité, vos données restent chez vous.</div><div><b>Produit</b><a href="../mac/">Mac</a><a href="../iphone/">iPhone et iPad</a><a href="../features/">Fonctions</a><a href="../security/">Sécurité</a></div><div><b>Ressources</b><a href="../help/">Aide</a><a href="../changelog/">Nouveautés</a><a href="../roadmap/">Feuille de route</a><a href="../accessibility/">Accessibilité</a><a href="../support/">Support</a><a href="../about/">À propos</a></div><div><b>Contact</b><a href="mailto:atxgrp@gmail.com">atxgrp@gmail.com</a></div></div><div class="legal">© 2026 ATX Grp · <a href="../privacy/">Confidentialité</a> · <a href="../terms/">Conditions</a> · <a href="../legal/">Mentions légales</a> · <a href="../credits/">Crédits</a><p>Pocket Ledger est indépendant : il n&#x27;est ni affilié à Apple ni approuvé par Apple. Mac, iPhone, iPad et macOS sont des marques d&#x27;Apple Inc.</p></div></div></footer></body></html>
