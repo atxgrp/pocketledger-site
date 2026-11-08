@@ -233,6 +233,14 @@ footer{border-top:1px solid var(--line);padding:var(--s5) 0;color:var(--muted);f
 .idea{border-top:1px solid var(--line);padding-top:var(--s3)}
 .idea h3{font-size:21px;margin-bottom:var(--s2)}
 .idea p{margin:0;color:var(--muted)}
+
+.hc-rows{display:grid;gap:var(--s2);margin-top:var(--s3)}
+.hc-row{display:grid;grid-template-columns:7.5em 1fr auto;align-items:center;gap:var(--s2);font-size:15px}
+.hc-row.two{grid-template-columns:1fr auto;padding:var(--s1) 0}
+.hc-row.total{border-top:1px solid var(--line);margin-top:var(--s1);padding-top:var(--s2);font-weight:600}
+.hc-bar{height:8px;border-radius:4px;background:color-mix(in srgb,var(--fg) 10%,transparent);overflow:hidden}
+.hc-bar i{display:block;height:100%;background:var(--accent);border-radius:4px}
+.hc-num{font-variant-numeric:tabular-nums;text-align:right}
 </style><style>/* Interactive simulations of the Mac and iPhone apps. Invented data only. Tokens come from site.css. */
 .sim{--app-bg:var(--surface);--app-side:var(--bg);--app-line:var(--line);margin:0 auto;max-width:1040px}
 .sim-bar{display:flex;gap:8px;justify-content:center;margin-bottom:var(--s3);flex-wrap:wrap}
