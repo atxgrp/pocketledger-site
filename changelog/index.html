@@ -253,6 +253,16 @@ footer{border-top:1px solid var(--line);padding:var(--s5) 0;color:var(--muted);f
 .sidetoc a:hover{color:var(--fg);border-left-color:var(--fg)}
 @media(max-width:960px){.page-grid{grid-template-columns:minmax(0,1fr)}.sidetoc{display:none}}
 .page ul.toc{padding-left:0}.page ul.toc li{margin:0}
+
+/* home: data journey and formats */
+.flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s4)}
+.hop{position:relative;border-top:1px solid var(--line);padding-top:var(--s3)}
+.hop b{display:block;font-size:19px;font-weight:600;margin-bottom:var(--s1)}
+.hop span{color:var(--muted)}
+.hop:not(:last-child)::after{content:"→";position:absolute;right:calc(var(--s4) * -.75);top:var(--s3);color:var(--muted)}
+.fmts{display:flex;flex-wrap:wrap;gap:var(--s2)}
+.fmt{border:1px solid var(--line);border-radius:999px;padding:6px 16px;font-size:15px;font-variant-numeric:tabular-nums}
+@media(max-width:760px){.flow{grid-template-columns:1fr}.hop:not(:last-child)::after{display:none}}
 </style><script>(function(){try{var s=localStorage.plLang;var want=s||((navigator.language||'en').toLowerCase().indexOf('fr')==0?'fr':'en');if(want!=='fr'){location.replace('../en/changelog/');}}catch(e){}})();</script></head>
 <body><a class="skip" href="#main">Aller au contenu</a><header><div class="wrap"><a class="brand" href="../"><img src="../img/icon.png" alt="" width="28" height="28">Pocket Ledger</a><nav aria-label="Pocket Ledger"><a href="../mac/">Mac</a><a href="../iphone/">iPhone et iPad</a><a href="../features/">Fonctions</a><a href="../security/">Sécurité</a><a href="../help/">Aide</a></nav><a class="lang-switch" href="../en/changelog/" hreflang="en" lang="en" onclick="try{localStorage.plLang='en'}catch(e){}">English</a></div></header>
 <main id="main"><div class="wrap"><div class="page solo"><h1>Nouveautés</h1><p class="lead">Le journal des versions.</p><h2>1.2.0</h2>

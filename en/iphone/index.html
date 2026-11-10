@@ -253,6 +253,16 @@ footer{border-top:1px solid var(--line);padding:var(--s5) 0;color:var(--muted);f
 .sidetoc a:hover{color:var(--fg);border-left-color:var(--fg)}
 @media(max-width:960px){.page-grid{grid-template-columns:minmax(0,1fr)}.sidetoc{display:none}}
 .page ul.toc{padding-left:0}.page ul.toc li{margin:0}
+
+/* home: data journey and formats */
+.flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--s4)}
+.hop{position:relative;border-top:1px solid var(--line);padding-top:var(--s3)}
+.hop b{display:block;font-size:19px;font-weight:600;margin-bottom:var(--s1)}
+.hop span{color:var(--muted)}
+.hop:not(:last-child)::after{content:"→";position:absolute;right:calc(var(--s4) * -.75);top:var(--s3);color:var(--muted)}
+.fmts{display:flex;flex-wrap:wrap;gap:var(--s2)}
+.fmt{border:1px solid var(--line);border-radius:999px;padding:6px 16px;font-size:15px;font-variant-numeric:tabular-nums}
+@media(max-width:760px){.flow{grid-template-columns:1fr}.hop:not(:last-child)::after{display:none}}
 </style><style>/* Interactive simulations of the Mac and iPhone apps. Invented data only. Tokens come from site.css. */
 .sim{--app-bg:var(--surface);--app-side:var(--bg);--app-line:var(--line);margin:0 auto;max-width:1040px}
 .sim-bar{display:flex;gap:8px;justify-content:center;margin-bottom:var(--s3);flex-wrap:wrap}
