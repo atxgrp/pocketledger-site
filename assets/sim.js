@@ -211,5 +211,8 @@
     }
     el.appendChild(stage); el.appendChild(cap); show(kind === 'both' ? first : kind);
   }
-  document.querySelectorAll('.sim[data-sim]').forEach(init);
+  /* idempotent, and exposed: a single-page app (web-next) calls plSimBoot() after each client-side navigation */
+  function boot() { document.querySelectorAll('.sim[data-sim]:not([data-ready])').forEach(function (el) { el.setAttribute('data-ready', '1'); init(el); }); }
+  window.plSimBoot = boot;
+  boot();
 })();
