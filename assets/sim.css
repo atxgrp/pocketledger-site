@@ -1,0 +1,83 @@
+/* Interactive simulations of the Mac and iPhone apps. Invented data only. Tokens come from site.css. */
+.sim{--app-bg:var(--surface);--app-side:var(--bg);--app-line:var(--line);margin:0 auto;max-width:1040px}
+.sim-bar{display:flex;gap:8px;justify-content:center;margin-bottom:var(--s3);flex-wrap:wrap}
+.sim-bar button{min-height:44px;padding:0 18px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--fg);font:inherit;font-size:16px;font-weight:550;cursor:pointer}
+.sim-bar button[aria-pressed="true"]{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+.sim-cap{text-align:center;color:var(--muted);font-size:16px;margin:var(--s3) 0 0}
+.sim button{font:inherit;color:inherit}
+.sim [hidden]{display:none!important}
+.sim .neg{color:var(--neg)}.sim .pos{color:var(--pos)}.sim .mut{color:var(--muted)}
+.sim .num{font-variant-numeric:tabular-nums}
+
+/* Mac window */
+.mac{border:1px solid var(--line);border-radius:14px;background:var(--app-bg);overflow:hidden;display:grid;grid-template-columns:190px minmax(0,1fr);grid-template-rows:auto 1fr;height:600px;box-shadow:0 24px 60px rgba(0,0,0,.18)}
+.mac-title{grid-column:1/3;display:flex;align-items:center;gap:8px;padding:12px 14px;border-bottom:1px solid var(--app-line);background:var(--app-side)}
+.mac-title i{width:12px;height:12px;border-radius:50%;display:block;background:#ff5f57}.mac-title i:nth-child(2){background:#febc2e}.mac-title i:nth-child(3){background:#28c840}
+.mac-title span{margin-left:10px;font-size:16px;color:var(--muted)}
+.mac-side{background:var(--app-side);border-right:1px solid var(--app-line);padding:12px 10px;display:flex;flex-direction:column;gap:2px}
+.mac-side button{display:flex;align-items:center;gap:10px;width:100%;min-height:40px;padding:0 12px;border:0;border-radius:10px;background:transparent;text-align:left;font-size:16px;cursor:pointer;color:var(--muted)}
+.mac-side button[aria-selected="true"]{background:var(--accent-soft);color:var(--accent);font-weight:600}
+.mac-side button:hover{color:var(--fg)}
+.mac-side svg{width:18px;height:18px;flex:none}
+.mac-main{padding:20px 24px;overflow:auto}
+.mac-main h4,.phone-body h4{margin:0 0 4px;font-size:22px;letter-spacing:-.02em}
+.mac-main .sub,.phone-body .sub{color:var(--muted);font-size:16px;margin:0 0 16px}
+@media(max-width:760px){.mac{grid-template-columns:1fr;grid-template-rows:auto auto 1fr;height:640px}.dc,.cc{display:none}.mcat{display:block!important}.mac-title{grid-column:1}.mac-side{flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid var(--app-line)}.mac-side button{width:auto;white-space:nowrap}.mac-main{padding:16px}}
+
+/* shared app widgets */
+.cards{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-bottom:16px}
+.kpi{border:1px solid var(--app-line);border-radius:14px;padding:14px 16px}
+.kpi small{display:block;color:var(--muted);font-size:16px}.kpi b{font-size:26px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.panel{border:1px solid var(--app-line);border-radius:14px;padding:14px 16px;margin-bottom:12px}
+.panel h5{margin:0 0 10px;font-size:16px;color:var(--muted);font-weight:600}
+.bars{display:grid;gap:10px}
+.bar-row{display:grid;grid-template-columns:110px minmax(0,1fr) 84px;gap:10px;align-items:center;font-size:16px}
+.bar{height:10px;border-radius:999px;background:var(--accent-soft);overflow:hidden}.bar>i{display:block;height:100%;background:var(--accent);border-radius:999px;transition:width .3s var(--ease)}
+.bar.over>i{background:var(--neg)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.chips button{min-height:36px;padding:0 14px;border-radius:999px;border:1px solid var(--app-line);background:transparent;cursor:pointer;font-size:16px}
+.chips button[aria-pressed="true"]{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+table.tx{width:100%;border-collapse:collapse;font-size:16px}
+table.tx th{text-align:left;font-weight:600;color:var(--muted);font-size:16px;padding:6px 8px;border-bottom:1px solid var(--app-line)}
+table.tx td{padding:8px;border-bottom:1px solid var(--app-line)}
+table.tx td.r,table.tx th.r{text-align:right}
+.tick{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--muted);background:transparent;cursor:pointer;display:grid;place-items:center;padding:0}
+.tick[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-fg)}
+.tick svg{width:14px;height:14px}
+.tag-none{color:var(--warn);font-size:16px}
+.step{display:inline-flex;gap:6px;align-items:center}
+.step button{width:32px;height:32px;border-radius:50%;border:1px solid var(--app-line);background:transparent;cursor:pointer;font-size:18px;line-height:1}
+.field{display:grid;gap:4px;margin-bottom:14px}.field label{font-size:16px;display:flex;justify-content:space-between}.field output{font-weight:600;font-variant-numeric:tabular-nums}
+.field input[type=range]{width:100%;accent-color:var(--accent);min-height:28px}
+.sw{display:flex;align-items:center;gap:10px;margin:8px 0 14px;font-size:16px;min-height:36px}.sw input{width:20px;height:20px;accent-color:var(--accent)}
+.chart{width:100%;height:auto;display:block}
+.chart text{fill:var(--muted);font-size:16px}
+.notice{border-radius:12px;padding:10px 14px;font-size:16px;background:var(--accent-soft);margin-top:10px}
+.notice.warn{background:color-mix(in srgb,var(--neg) 14%,transparent)}
+
+/* iPhone */
+.phones{display:flex;justify-content:center}
+.phone{width:320px;height:640px;border-radius:44px;border:10px solid #1b1b20;background:var(--app-bg);position:relative;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.25)}
+.phone::before{content:"";position:absolute;top:8px;left:50%;width:84px;height:22px;margin-left:-42px;background:#1b1b20;border-radius:14px;z-index:3}
+.phone-body{flex:1;overflow:auto;padding:46px 16px 84px}
+.phone .cards{grid-template-columns:1fr}
+.tabbar{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--app-line);background:var(--app-side);padding:4px 4px 8px}
+.tabbar button{border:0;background:transparent;display:grid;justify-items:center;gap:2px;font-size:16px;color:var(--muted);min-height:48px;cursor:pointer;border-radius:10px}
+.tabbar button[aria-selected="true"]{color:var(--accent);font-weight:600}
+.tabbar svg{width:22px;height:22px}
+.fab{position:absolute;right:16px;bottom:74px;width:52px;height:52px;border-radius:50%;border:0;background:var(--accent);color:var(--accent-fg);font-size:28px;line-height:1;cursor:pointer;box-shadow:0 8px 20px rgba(0,0,0,.3);z-index:2}
+.list{list-style:none;margin:0;padding:0}
+.list li{display:flex;justify-content:space-between;gap:10px;padding:11px 0;border-bottom:1px solid var(--app-line);font-size:16px;margin:0}
+.list small{display:block;color:var(--muted);font-size:16px}
+.sheet{position:absolute;inset:auto 0 0 0;background:var(--app-bg);border-top-left-radius:24px;border-top-right-radius:24px;border-top:1px solid var(--app-line);padding:18px 16px 22px;z-index:4;box-shadow:0 -12px 40px rgba(0,0,0,.3)}
+.sheet h5{margin:0 0 12px;font-size:17px}
+.sheet input,.sheet select{width:100%;min-height:44px;border-radius:12px;border:1px solid var(--app-line);background:var(--app-side);color:var(--fg);padding:0 12px;font:inherit;margin-bottom:10px}
+.sheet .row{display:flex;gap:8px}.sheet .row button{flex:1;min-height:44px;border-radius:999px;border:1px solid var(--app-line);background:transparent;cursor:pointer;font-weight:600}
+.sheet .row button.go{background:var(--accent);color:var(--accent-fg);border-color:var(--accent)}
+.scrim{position:absolute;inset:0;background:rgba(0,0,0,.4);z-index:3}
+.ipad-note{margin:var(--s4) auto 0;max-width:40em;text-align:center;color:var(--muted)}
+@media(prefers-reduced-motion:reduce){.bar>i{transition:none}}
+
+.txw{overflow-x:auto}
+.mcat{display:none;font-size:16px;color:var(--muted)}
+.phone .bar-row{grid-template-columns:78px minmax(0,1fr) 66px;gap:6px;font-size:16px}
